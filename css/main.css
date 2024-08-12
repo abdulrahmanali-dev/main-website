@@ -3,4 +3,10 @@
     h1 {
         font: normal 300 5rem var(--_font-accent);
     }
+    .eapp-logo-showcase-logo-innerInner img{
+        height: 61px !important;
+        width:  100px !important;
+        max-height: unset;
+        max-width: unset;
+    }
 }
