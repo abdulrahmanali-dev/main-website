@@ -9,4 +9,7 @@
         max-height: unset;
         max-width: unset;
     }
+    .logos-slider {
+        padding: 0 25px;
+    }
 }
