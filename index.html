@@ -94,22 +94,19 @@ document.addEventListener('visibilitychange', function(e) {
     setTimeout(() => {
 
     blink();
-}, 700);
+}, 7100);
 
   }else {
     document.title = pageTitle;
-    clearInterval(blinkEvent);
   }
 });
 
 function blink(){
-  blinkEvent = setInterval(function() {
     if(document.title === attentionMessage){
       document.title = pageTitle;
     }else {
       document.title = attentionMessage;
     }
-  }, 4500);
 }
 };
   </script>
@@ -247,18 +244,19 @@ function blink(){
          class="headline d-flex align-items-start flex-column loading-wrap"
         >
          <!-- <p class="headline__subtitle space-top loading__item">Hello!<br>I am Abdo</p> -->
-         <p class="headline__subtitle space-top loading__item">
-          Web Design that
+         <p class="headline__subtitle space-top loading__item" style="border: solid 2px;padding: 5px 20px;border-radius: 50px;font-weight: 500;">
+          Attention Brand Oweners... We Put
          </p>
-         <h1 class="headline__title loading__item">
-          Drive Sales<br />&amp; Double Leads
+         <h1 class="headline__title loading__item" style="letter-spacing: -7.9px !important;">YOUR STORE*<br>ON STEROIDS 🧪
          </h1>
-         <p class="headline__subtitle space-bottom loading__item fs-1">
-          Design, copy, and development engineered to
-          <strong class="fw-bold"> turn browsers into buyers </strong>
-          and
-          <strong class="fw-bold"> drive sales on autopilot. </strong>
-         </p>
+         <p class="headline__subtitle space-bottom loading__item fs-1"  ><strong class="fw-bold">Conversion Focused⚡</strong>Design, Copy and
+          Development for <i class="fw-bold" style="
+          font-style: italic;
+          color: rgb(84 245 63);
+          "> Shopify </i>Brands, designed to <strong class="fw-bold">make you run out of storage</strong>
+               and
+               <strong class="fw-bold">skyrocket your ROAS to the moon 🚀🌝</strong>
+              </p>
         </div>
         <!-- Headline End -->
        </div>
