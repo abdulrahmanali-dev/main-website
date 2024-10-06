@@ -751,3 +751,6 @@ list-style-type: none;
 .faq-item * {
     user-select: none;
 }
+#resume .row:first-of-type {
+    margin-bottom: 100px;
+}
