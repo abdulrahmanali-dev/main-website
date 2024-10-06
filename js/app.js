@@ -650,3 +650,30 @@ window.addEventListener('DOMContentLoaded', () => {
 // --------------------------------------------- //
 // Color Switch End
 // --------------------------------------------- //
+function toggleFAQ(question) {
+  const faqItem = question.parentElement; // The entire FAQ item
+  const answer = faqItem.querySelector('.faq-answer'); // Select the corresponding answer
+  const faqIcon = question.querySelector('.faqicon'); // Select the icon within the same question
+  faqItem.classList.toggle('open'); // Toggle the open class
+
+  if (faqItem.classList.contains('open')) {
+      answer.style.display = 'block'; // Show answer
+      requestAnimationFrame(() => {
+          answer.style.maxHeight = answer.scrollHeight + 'px'; // Animate to full height
+          answer.style.opacity = '1'; // Fade in
+      });
+      faqIcon.innerHTML = '<svg viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12L18 12" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>';
+
+      // Change the icon to indicate the FAQ is open
+  } else {
+      answer.style.maxHeight = '0'; // Collapse
+      answer.style.opacity = '0'; // Fade out
+      setTimeout(() => {
+          answer.style.display = 'none'; // Hide answer after transition
+      }, 200); // Match this with CSS transition duration
+      faqIcon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>';
+
+      // Change the icon to indicate the FAQ is closed
+  }
+}
+
