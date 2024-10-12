@@ -676,4 +676,3 @@ function toggleFAQ(question) {
       // Change the icon to indicate the FAQ is closed
   }
 }
-

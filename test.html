@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   </head>
+ <body>
+     
+
+    <script src="js/notificationEN.js"></script>
+
+    <script>
+      function addRandomNotification() {
+        // Sélectionne une notification aléatoire de la liste
+        const randomNotification = Notification(notificationsList[rnd(notificationsList.length)]);
+        const notifications = document.querySelectorAll(".Notification");
+        if (notifications.length >= 10) {
+          // Si on a déjà 10 notifications, supprime la plus ancienne (la première enfant de la liste)
+          notifications[0].remove();
+          console.log("supp");
+        }
+        // Ajoute la notification sélectionnée
+        addNotification(randomNotification);
+      }
+
+      // Démarre le processus d'ajout automatique avec un intervalle aléatoire
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ajoute quatre notifications aléatoires
+        for (let i = 0; i < 5; i++) {
+          setTimeout(function () {
+            addRandomNotification();
+          }, i * 100); // Augmente le délai pour chaque notification
+        }
+
+        // Votre code existant pour démarrer le processus d'ajout automatique...
+        (function loop() {
+          var rand = Math.round(Math.random() * (1000 - 100)) + 500; // Génère un délai aléatoire entre 500 et 1500 ms
+          setTimeout(function () {
+            addRandomNotification(); // Ajoute une notification aléatoire
+            loop();
+          }, rand);
+        })();
+      });
+    </script>
+ </body>
+</html>
