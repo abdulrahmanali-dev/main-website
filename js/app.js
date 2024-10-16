@@ -676,3 +676,16 @@ function toggleFAQ(question) {
       // Change the icon to indicate the FAQ is closed
   }
 }
+
+console.log('asdada');
+let shadowHost = document.querySelector('iframe');
+console.log(shadowHost);
+let buttonElement2 = shadowHost.shadowRoot.querySelector('shop-login-default');
+let buttonElement3 = buttonElement2.shadowRoot.querySelector('login-with-shop-button');
+let buttonElement4 = buttonElement3.shadowRoot.querySelector('button');
+
+shadowHost.style.cssText = "display: block; width: 100%;";
+buttonElement2.style.cssText = "display: block; width: 100%;";
+buttonElement3.style.cssText = "display: block; width: 100%;";
+buttonElement4.style.cssText = "display: block; width: 100%;border-radius: 0; padding: 15px;background: #3D5AFF;";
+console.log(buttonElement4 , "asdasad");
