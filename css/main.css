@@ -964,3 +964,18 @@ ul.Notifications__List {
     padding: inherit;
   }
      */
+
+
+     .logos-wrapper {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+     }
+    @media (max-width:992px) {
+        .logos-wrapper {
+            margin-top: 20px;
+        }
+        p.headline__subtitle.space-bottom.loading__item.fs-1 br  {
+            display: none;
+        }
+    }

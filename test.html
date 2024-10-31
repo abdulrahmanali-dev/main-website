@@ -76,3 +76,21 @@
 </style>
  </body>
 </html>
+
+
+
+
+
+<script>
+    function hideAndClickThrough(event, element) {
+        // Prevent the click from being stopped
+        event.stopPropagation();
+
+        // Hide the image by setting its display to 'none'
+        element.style.display = 'none';
+
+        // Set pointer-events to none so clicks pass through to the iframe
+        element.style.pointerEvents = 'none';
+    }
+</script>
+
