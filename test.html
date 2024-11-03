@@ -1,96 +1,137 @@
-<!DOCTYPE html>
-<html lang="en" >
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-   </head>
- <body>
-     
-
-    <script src="js/notificationEN.js"></script>
-
-    <script>
-      function addRandomNotification() {
-        // Sélectionne une notification aléatoire de la liste
-        const randomNotification = Notification(notificationsList[rnd(notificationsList.length)]);
-        const notifications = document.querySelectorAll(".Notification");
-        if (notifications.length >= 10) {
-          // Si on a déjà 10 notifications, supprime la plus ancienne (la première enfant de la liste)
-          notifications[0].remove();
-          console.log("supp");
-        }
-        // Ajoute la notification sélectionnée
-        addNotification(randomNotification);
-      }
-
-      // Démarre le processus d'ajout automatique avec un intervalle aléatoire
-      document.addEventListener("DOMContentLoaded", function () {
-        // Ajoute quatre notifications aléatoires
-        for (let i = 0; i < 5; i++) {
-          setTimeout(function () {
-            addRandomNotification();
-          }, i * 100); // Augmente le délai pour chaque notification
-        }
-
-        // Votre code existant pour démarrer le processus d'ajout automatique...
-        (function loop() {
-          var rand = Math.round(Math.random() * (1000 - 100)) + 500; // Génère un délai aléatoire entre 500 et 1500 ms
-          setTimeout(function () {
-            addRandomNotification(); // Ajoute une notification aléatoire
-            loop();
-          }, rand);
-        })();
-      });
-    </script>
-    
-    Get Back To The Activities You Love With Steady Hands & Control!
-              <ul class="elementor-icon-list-items">
-                  <li class="elementor-icon-list-item">
-
-                  <svg fill="#b4d167" height="200px" width="200px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 229.5 229.5" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M214.419,32.12c-0.412-2.959-2.541-5.393-5.419-6.193L116.76,0.275c-1.315-0.366-2.704-0.366-4.02,0L20.5,25.927 c-2.878,0.8-5.007,3.233-5.419,6.193c-0.535,3.847-12.74,94.743,18.565,139.961c31.268,45.164,77.395,56.738,79.343,57.209 c0.579,0.14,1.169,0.209,1.761,0.209s1.182-0.07,1.761-0.209c1.949-0.471,48.076-12.045,79.343-57.209 C227.159,126.864,214.954,35.968,214.419,32.12z M174.233,85.186l-62.917,62.917c-1.464,1.464-3.384,2.197-5.303,2.197 s-3.839-0.732-5.303-2.197l-38.901-38.901c-1.407-1.406-2.197-3.314-2.197-5.303s0.791-3.897,2.197-5.303l7.724-7.724 c2.929-2.928,7.678-2.929,10.606,0l25.874,25.874l49.89-49.891c1.406-1.407,3.314-2.197,5.303-2.197s3.897,0.79,5.303,2.197 l7.724,7.724C177.162,77.508,177.162,82.257,174.233,85.186z"></path> </g></svg>					
-
-                        <span class="elementor-icon-list-text">30-Day Moneyback Guarantee</span>
-                      </li>
-                    <li class="elementor-icon-list-item">
-                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1C6.44772 1 6 1.44772 6 2V3H5C3.34315 3 2 4.34315 2 6V20C2 21.6569 3.34315 23 5 23H13.101C12.5151 22.4259 12.0297 21.7496 11.6736 21H5C4.44772 21 4 20.5523 4 20V11H20V11.2899C20.7224 11.5049 21.396 11.8334 22 12.2547V6C22 4.34315 20.6569 3 19 3H18V2C18 1.44772 17.5523 1 17 1C16.4477 1 16 1.44772 16 2V3H8V2C8 1.44772 7.55228 1 7 1ZM16 6V5H8V6C8 6.55228 7.55228 7 7 7C6.44772 7 6 6.55228 6 6V5H5C4.44772 5 4 5.44772 4 6V9H20V6C20 5.44772 19.5523 5 19 5H18V6C18 6.55228 17.5523 7 17 7C16.4477 7 16 6.55228 16 6Z" fill="#b4d167"></path> <path d="M15.2929 17.7071C15.6834 17.3166 16.3166 17.3166 16.7071 17.7071L17.3483 18.3482L19.2473 16.4491C19.6379 16.0586 20.271 16.0586 20.6616 16.4491C21.0521 16.8397 21.0521 17.4728 20.6616 17.8634L18.1213 20.4036C18.0349 20.49 17.9367 20.5573 17.8318 20.6054C17.4488 20.8294 16.9488 20.7772 16.6203 20.4487L15.2929 19.1213C14.9024 18.7308 14.9024 18.0976 15.2929 17.7071Z" fill="#b4d167"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M24 18C24 21.3137 21.3137 24 18 24C14.6863 24 12 21.3137 12 18C12 14.6863 14.6863 12 18 12C21.3137 12 24 14.6863 24 18ZM13.9819 18C13.9819 20.2191 15.7809 22.0181 18 22.0181C20.2191 22.0181 22.0181 20.2191 22.0181 18C22.0181 15.7809 20.2191 13.9819 18 13.9819C15.7809 13.9819 13.9819 15.7809 13.9819 18Z" fill="#b4d167"></path> </g></svg>
-                        <span class="elementor-icon-list-text">Payment plans available</span>
-                      </li>
-                </ul>
-<style>
-  svg {
-    width: 50px;
-  }
-  ul {
-    padding: 0;
-  }
-  li {
-    list-style: none;
-  }
-  .elementor-icon-list-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-</style>
- </body>
-</html>
-
-
-
-
-
+<div id="mc_embed_shell">
+ <div id="mc_embed_signup">
+  <form action="https://lesfinfinettes.us14.list-manage.com/subscribe/post?u=fce841a11d94efbcce1188613&amp;id=460ede8b72&amp;f_id=0036b5e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+   <div id="mc_embed_signup_scroll">
+    <h2>Subscribe</h2>
+    <div class="indicates-required"><span class="asterisk">*</span>indicates required</div>
+    <div class="mc-field-group">
+     <label for="mce-MMERGE13">Description de la pièce (couleur, forme, élément distinctif)<span class="asterisk">*</span></label
+     ><input type="text" name="MMERGE13" class="required text" id="mce-MMERGE13" required="" value="" />
+    </div>
+    <div class="mc-field-group">
+     <label for="mce-EMAIL">Email Address<span class="asterisk">*</span></label
+     ><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" />
+    </div>
+    <div class="mc-field-group">
+     <label for="mce-PHONE">Téléphone<span class="asterisk">*</span></label
+     ><input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="" />
+    </div>
+    <div class="mc-field-group size1of2">
+     <label for="mce-DATES-month">Date<span class="asterisk">*</span></label>
+     <div class="datefield">
+      <span class="subfield dayfield"><input class="datepart required" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="DATES[day]" id="mce-DATES-day" value="" /></span>/<span class="subfield monthfield"><input class="datepart required" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="DATES[month]" id="mce-DATES-month" value="" /></span>/<span class="subfield yearfield"
+       ><input class="datepart required" type="text" pattern="[0-9]*" placeholder="YYYY" size="4" maxlength="4" name="DATES[year]" id="mce-DATES-year" value="" /></span
+      ><span class="small-meta nowrap">( dd / mm / yyyy )</span>
+     </div>
+    </div>
+    <div class="mc-field-group">
+     <label for="mce-NUMRO">No de la pièce<span class="asterisk">*</span></label
+     ><input type="number" name="NUMRO" class="required number" id="mce-NUMRO" required="" value="" />
+    </div>
+    <div class="mc-field-group">
+     <label for="mce-SIGN">Signature sur la pièce<span class="asterisk">*</span></label
+     ><input type="text" name="SIGN" class="required text" id="mce-SIGN" required="" value="" />
+    </div>
+    <div class="mc-field-group input-group">
+     <strong>Peinture<span class="asterisk">*</span></strong>
+     <ul>
+      <li><input type="radio" name="MMERGE10" id="mce-MMERGE100" value="J'ai vérifié et il n'y a pas de peinture sur le dessous de ma pièce. Il n'y a donc pas de danger que ma pièce colle au four et se brise 🙂" /><label for="mce-MMERGE100">J'ai vérifié et il n'y a pas de peinture sur le dessous de ma pièce. Il n'y a donc pas de danger que ma pièce colle au four et se brise 🙂</label></li>
+     </ul>
+    </div>
+    <div class="mc-field-group input-group">
+     <strong>Délais de ramassage<span class="asterisk">*</span></strong>
+     <ul>
+      <li><input type="radio" name="MMERGE11" id="mce-MMERGE110" value="Je m'engage à venir chercher ma pièce dans un délai de 6 semaines une fois qu'elle sera prête. Si je ne viens pas, je suis d'accord que ma pièce sera offerte en don." /><label for="mce-MMERGE110">Je m'engage à venir chercher ma pièce dans un délai de 6 semaines une fois qu'elle sera prête. Si je ne viens pas, je suis d'accord que ma pièce sera offerte en don.</label></li>
+     </ul>
+    </div>
+    <div class="mc-field-group input-group">
+     <strong>Infolettre</strong>
+     <ul>
+      <li>
+        <input type="radio" name="MMERGE12" id="mce-MMERGE120" value="J'aimerais bien recevoir l'infolettre mensuel des Finfinettes (On parle bien ici d'une seul courriel par mois avec plein d'informations intéressantes :))" />
+        <label for="mce-MMERGE120">J'aimerais bien recevoir l'infolettre mensuel des Finfinettes (On parle bien ici d'une seul courriel par mois avec plein d'informations intéressantes :))
+        </label></li>
+     </ul>
+    </div>
+    <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Confirmer ma fiche de cuisson" /></div>
+    <div id="validation-messages" style="color: red; margin-top: 10px"></div>
+    <div hidden=""><input type="hidden" name="tags" value="40186756" /></div>
+    <div id="mce-responses" class="clear">
+     <div class="response" id="mce-error-response" style="display: none"></div>
+     <div class="response" id="mce-success-response" style="display: none"></div>
+    </div>
+    <div aria-hidden="true" style="position: absolute; left: -5000px"><input type="text" name="b_fce841a11d94efbcce1188613_460ede8b72" tabindex="-1" value="" /></div>
+   </div>
+  </form>
+ </div>
+</div>
 <script>
-    function hideAndClickThrough(event, element) {
-        // Prevent the click from being stopped
-        event.stopPropagation();
+ document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", function (event) {
+  // Prevent the form from submitting
+  event.preventDefault();
 
-        // Hide the image by setting its display to 'none'
-        element.style.display = 'none';
+  // Clear previous messages
+  const messagesDiv = document.getElementById("validation-messages");
+  messagesDiv.innerHTML = "";
 
-        // Set pointer-events to none so clicks pass through to the iframe
-        element.style.pointerEvents = 'none';
-    }
+  // Select all fields
+  let isValid = true;
+  let messages = [];
+  const description = document.getElementById("mce-MMERGE13");
+  const email = document.getElementById("mce-EMAIL");
+  const phone = document.getElementById("mce-PHONE");
+  const day = document.getElementById("mce-DATES-day");
+  const month = document.getElementById("mce-DATES-month");
+  const year = document.getElementById("mce-DATES-year");
+  const numro = document.getElementById("mce-NUMRO");
+  const sign = document.getElementById("mce-SIGN");
+
+  // Function to check if a field is empty
+  const isEmpty = (field) => field.value.trim() === "";
+
+  // Basic validations
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (isEmpty(description) || isEmpty(email) || isEmpty(phone) || isEmpty(day) || isEmpty(month) || isEmpty(year) || isEmpty(numro) || isEmpty(sign)) {
+   messages.push("Tous les champs marqués d'un * sont obligatoires.");
+   isValid = false;
+  }
+  if (!emailPattern.test(email.value)) {
+   messages.push("Veuillez entrer une adresse e-mail valide.");
+   isValid = false;
+  }
+  if (isNaN(phone.value)) {
+   messages.push("Veuillez entrer un numéro de téléphone valide.");
+   isValid = false;
+  }
+  if (isNaN(day.value) || isNaN(month.value) || isNaN(year.value)) {
+   messages.push("Veuillez entrer une date valide en chiffres (JJ/MM/AAAA).");
+   isValid = false;
+  }
+
+  // Radio button validation: check that each group has a selection
+  const peintureSelected = document.querySelector('input[name="MMERGE10"]:checked');
+  const ramassageSelected = document.querySelector('input[name="MMERGE11"]:checked');
+  // const infolettreSelected = document.querySelector('input[name="MMERGE12"]:checked');
+
+  if (!peintureSelected) {
+   messages.push("Veuillez sélectionner une option pour 'Peinture'.");
+   isValid = false;
+  }
+  if (!ramassageSelected) {
+   messages.push("Veuillez sélectionner une option pour 'Délais de ramassage'.");
+   isValid = false;
+  }
+  // if (!infolettreSelected) {
+  //  messages.push("Veuillez sélectionner une option pour 'Infolettre'.");
+  //  isValid = false;
+  // }
+
+  // Display messages or submit form
+  if (isValid) {
+   document.getElementById("mc-embedded-subscribe-form").submit();
+  } else {
+   messagesDiv.innerHTML = messages.join("<br>");
+  }
+ });
 </script>
-
