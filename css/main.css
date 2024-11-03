@@ -184,6 +184,9 @@ h1 {
 .sm-me-img {
     border-radius: 28px;
 }
+.sm-me-svg {
+   width: 100px;
+}
 .image-me1 {
     background-image:url(../images/me-vid.webp);
     cursor: pointer;
