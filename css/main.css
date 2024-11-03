@@ -1017,7 +1017,7 @@ ul.Notifications__List {
      width: calc(100% + 4px);
      height: calc(100% + 4px);
      z-index: -1;
-     animation: steam 4s linear infinite;
+     animation: steam 3s linear infinite;
      border-radius: var(--_radius);
  }
  
@@ -1039,3 +1039,34 @@ ul.Notifications__List {
  .pricing-option:after {
    filter: blur(8px);
  }
+ .image-frame {
+    background-image: url(../images/Frame\ 1707479423\ \(4\).png);
+ }
+
+
+
+ /*  */
+    
+@media only screen and (min-width: 1200px) {
+    .item {
+        width: 32vw !important;
+    }
+}
+ 
+.item {
+    width: 45vw;
+    height: 400px  ;
+    background-color: var(--base);
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+    -webkit-animation: 1s infinite animateZ;
+    -moz-animation: 1s infinite animateZ;
+    animation: 1s infinite animateZ;
+}
