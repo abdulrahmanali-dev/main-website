@@ -1202,3 +1202,8 @@ section#pricing {
         /* Adjust based on duplicated images to maintain smooth looping */
     }
 }
+
+section#solution .reveal-type,
+section#solution .reveal-type * {
+    text-align: center;
+}
