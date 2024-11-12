@@ -1207,3 +1207,15 @@ section#solution .reveal-type,
 section#solution .reveal-type * {
     text-align: center;
 }
+
+.image-frame2,
+.image-frame {
+    background-position: -306px !important;
+}
+
+@media (max-width:992px) {
+    .image-frame2,
+    .image-frame {
+        background-position: -151px !important;
+    }
+}
