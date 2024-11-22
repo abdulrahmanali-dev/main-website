@@ -1218,3 +1218,17 @@ section#solution .reveal-type * {
     display: none;
   }
 }
+
+.news-btn {
+  border: solid #b99041;
+  right: 0 !important;
+  top: 45%;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  transform: rotate(90deg) translateY(-46px) ;
+  border-radius: 0% 0 10px   10px ;
+  border-top: none;
+  display: none;
+}
