@@ -682,7 +682,7 @@ $(".modal form").submit(function (e) {
   // If not already submitted, proceed with submission
   $.ajax({
     type: "POST",
-    url: "mail.php", // Change to your PHP script path
+    url: "../mail.php", // Change to your PHP script path
     data: th.serialize(),
   })
     .done(function () {
