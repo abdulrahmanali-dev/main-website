@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+  const overlay = document.getElementById("overlay");
+  const button = document.getElementById("audit_btn");
+
+  const modal1 = document.getElementById("modal1");
+  const overlay1 = document.getElementById("overlay1");
+  const button1 = document.getElementById("audit_btn1");
+
+  button.addEventListener("click", function () {
+    modal.classList.add("active");
+    overlay.classList.add("active");
+    overlay.classList.remove("hidden");
+    modal.classList.remove("hidden");
+  });
+
+  button1.addEventListener("click", function () {
+    modal1.classList.add("active");
+    overlay1.classList.add("active");
+    overlay1.classList.remove("hidden");
+    modal1.classList.remove("hidden");
+  });
+
+  overlay.addEventListener("click", function () {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
+    setTimeout(() => {
+      overlay.classList.add("hidden");
+      modal.classList.add("hidden");
+    }, 300); // Match the CSS transition duration
+  });
+  overlay1.addEventListener("click", function () {
+    modal1.classList.remove("active");
+    overlay1.classList.remove("active");
+    setTimeout(() => {
+      overlay1.classList.add("hidden");
+      modal1.classList.add("hidden");
+    }, 300); // Match the CSS transition duration
+  });
+});
+ 
 /*! ------------------------------------------------
  * Project Name: Blayden - Personal Portfolio & Resume HTML Template
  * Project Description: Show yourself brightly with Blayden - clean and creative portfolio and resume template!
