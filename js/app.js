@@ -653,12 +653,39 @@ $(".modal form").submit(function (e) {
   var th = $(this); // Current form
   var modal = th.closest(".modal"); // Find the closest modal containing the form
 
+  // Check if the form has already been submitted
+  if (th.data("submitted")) {
+    // Display a funny message if already submitted
+    modal.find(".form").addClass("is-hidden");
+    modal.find(".form__reply").addClass("is-visible").html(`
+      <i class="ph-thin ph-smiley-wink reply__icon"></i>
+      <p class="reply__title">Oops!</p>
+      <span class="reply__text">You can only submit this form once! Nice try though! 😄</span>
+    `);
+
+    setTimeout(function () {
+      // Reset reply and restore form after 5 seconds
+      modal.find(".form__reply").removeClass("is-visible").html(`
+        <i class="ph-thin ph-smiley reply__icon"></i>
+        <p class="reply__title">Done!</p>
+        <span class="reply__text">See that was simple. Now expect to receive your Free Audit in the next 48h</span>
+      `);
+      modal.find(".form").removeClass("is-hidden");
+    }, 5000);
+
+    return false; // Prevent further execution
+  }
+
+  // If not already submitted, proceed with submission
   $.ajax({
     type: "POST",
     url: "mail.php", // Change to your PHP script path
     data: th.serialize(),
   })
     .done(function () {
+      // Mark form as submitted
+      th.data("submitted", true);
+
       // Hide form and show reply message in the corresponding modal
       modal.find(".form").addClass("is-hidden");
       modal.find(".form__reply").addClass("is-visible");
@@ -666,7 +693,7 @@ $(".modal form").submit(function (e) {
       setTimeout(function () {
         // Reset the form and restore visibility after 5 seconds
         modal.find(".form__reply").removeClass("is-visible");
-        modal.find(".form").delay(300).removeClass("is-hidden");
+        modal.find(".form").removeClass("is-hidden");
         th.trigger("reset"); // Reset form fields
       }, 5000);
     })
