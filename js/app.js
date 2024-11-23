@@ -7,11 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay1 = document.getElementById("overlay1");
   const button1 = document.getElementById("audit_btn1");
 
+  const loadingFades = document.querySelectorAll(".loading__fade");
+
+  const setZIndex = (zIndex) => {
+    loadingFades.forEach((element) => {
+      element.style.zIndex = zIndex; // Apply z-index to each element directly
+    });
+  };
+
   button.addEventListener("click", function () {
     modal.classList.add("active");
     overlay.classList.add("active");
     overlay.classList.remove("hidden");
     modal.classList.remove("hidden");
+
+    setZIndex("3"); // Set z-index to 3 when modal is active
   });
 
   button1.addEventListener("click", function () {
@@ -19,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay1.classList.add("active");
     overlay1.classList.remove("hidden");
     modal1.classList.remove("hidden");
+
+    setZIndex("3"); // Set z-index to 3 when modal1 is active
   });
 
   overlay.addEventListener("click", function () {
@@ -28,7 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.classList.add("hidden");
       modal.classList.add("hidden");
     }, 300); // Match the CSS transition duration
+
+    setZIndex(""); // Reset z-index when modal is inactive
   });
+
   overlay1.addEventListener("click", function () {
     modal1.classList.remove("active");
     overlay1.classList.remove("active");
@@ -36,9 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay1.classList.add("hidden");
       modal1.classList.add("hidden");
     }, 300); // Match the CSS transition duration
+
+    setZIndex(""); // Reset z-index when modal1 is inactive
   });
 });
- 
+
 /*! ------------------------------------------------
  * Project Name: Blayden - Personal Portfolio & Resume HTML Template
  * Project Description: Show yourself brightly with Blayden - clean and creative portfolio and resume template!
