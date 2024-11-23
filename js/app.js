@@ -664,43 +664,33 @@ $(function() {
     });
     return false;
   });
-  $("#audit-form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      $('#audit-form').find('.form').addClass('is-hidden');
-      $('#audit-form').find('.form__reply').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('#audit-form').find('.form__reply').removeClass('is-visible');
-        $('#audit-form').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
-    });
-    return false;
+// Handle the first form
+$(".form-container--1 #audit-form").submit(function () {
+  var th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "mail.php",
+    data: th.serialize(),
+  }).done(function () {
+    $(".form-container--1 #audit-form")
+      .find(".form")
+      .addClass("is-hidden");
+    $(".form-container--1 #audit-form")
+      .find(".form__reply")
+      .addClass("is-visible");
+    setTimeout(function () {
+      $(".form-container--1 #audit-form")
+        .find(".form__reply")
+        .removeClass("is-visible");
+      $(".form-container--1 #audit-form")
+        .find(".form")
+        .delay(300)
+        .removeClass("is-hidden");
+      th.trigger("reset");
+    }, 5000);
   });
-  $("#contact-form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      $('.contact').find('.form').addClass('is-hidden');
-      $('.contact').find('.form__reply').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.contact').find('.form__reply').removeClass('is-visible');
-        $('.contact').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
-      
-    });
-    return false;
-  });
+  return false;
+});
   // --------------------------------------------- //
   // Contact Form End
   // --------------------------------------------- //
