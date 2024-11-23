@@ -664,6 +664,9 @@ $(".modal form").submit(function (e) {
     `);
 
     setTimeout(function () {
+      modal.find(".form").removeClass("is-hidden");
+    }, 5000);
+    setTimeout(function () {
       // Reset reply and restore form after 5 seconds
       modal.find(".form__reply").removeClass("is-visible").html(`
         <i class="ph-thin ph-smiley reply__icon"></i>
@@ -671,7 +674,7 @@ $(".modal form").submit(function (e) {
         <span class="reply__text">See that was simple. Now expect to receive your Free Audit in the next 48h</span>
       `);
       modal.find(".form").removeClass("is-hidden");
-    }, 5000);
+    }, 6000);
 
     return false; // Prevent further execution
   }
