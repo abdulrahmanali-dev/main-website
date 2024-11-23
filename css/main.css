@@ -1462,16 +1462,48 @@ right: 7rem;
   padding: 20px;
   height: 100%;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s ease-in-out;
+  transition:   0.3s ease-in-out;
   display: block;
   z-index: 123213213123123112;
   border-radius: calc(var(--_radius) + -3px);
+  opacity: 0;
 }
 .modal {
   background-color:var(--base-tint)
 }
 .modal.active {
   top:  0;
+  opacity: 1;
+}
+
+@media (max-width:992px) {
+.modal {
+height: fit-content;
+position: fixed;
+}
+#pricing  {
+  padding-bottom: 100px;
+}
+  
+#faq  {
+  padding-top: 0;
+}
+  
+.modal.active {
+  opacity: 1;
+  top: 12%;
+  width: 95%;
+  left: 2.5%;
+  padding-bottom: 0;
+}
+
+section {
+  position: relative;
+  z-index: -12391203821;
+}
+}
+.checkbox-label.d-flex {
+  font-size: 24px;
 }
 
 
