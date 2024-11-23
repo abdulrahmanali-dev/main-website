@@ -129,6 +129,7 @@ gsap.ticker.lagSmoothing(0);
 // Scroll to Top Button Start
 // --------------------------------------------- //
 const toTop = document.querySelector("#to-top");
+const wp = document.querySelector("#wp");
 
 toTop.addEventListener("click", function(event){
   event.preventDefault()
@@ -141,7 +142,18 @@ toTop.addEventListener("click", () => gsap.to(window, {
 }));
 
 gsap.set(toTop, { opacity: 0 });
+gsap.set(wp, { opacity: 0 });
 
+gsap.to(wp, {
+  opacity: 1,
+  autoAlpha: 1,
+  scrollTrigger: {
+    trigger: "body",
+    start: "top -20%",
+    end: "top -20%",
+    toggleActions: "play none reverse none"
+  }
+});
 gsap.to(toTop, {
   opacity: 1,
   autoAlpha: 1,
@@ -650,6 +662,31 @@ $(function() {
 // --------------------------------------------- //
 // Color Switch End
 // --------------------------------------------- //
+
+// Select the button and the target section
+const newsButton = document.querySelector('.news-btn');
+console.log(newsButton);
+const pricingSection = document.querySelector('#pricing');
+
+// Create an IntersectionObserver to track the visibility of the pricing section
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Show the button when the pricing section is visible
+      newsButton.style.right = '0';
+    } else {
+      // Hide the button when the pricing section is not visible
+      newsButton.style.right = '-4%';
+    }
+  });
+}, {
+  root: null, // Use the viewport as the root
+  rootMargin: '0px', // Add margins to the root for better detection
+  threshold: 0.4 // Trigger when at least 50% of the section is visible
+});
+
+// Start observing the pricing section
+observer.observe(pricingSection);
 function toggleFAQ(question) {
   const faqItem = question.parentElement; // The entire FAQ item
   const answer = faqItem.querySelector('.faq-answer'); // Select the corresponding answer
@@ -689,3 +726,4 @@ buttonElement2.style.cssText = "display: block; width: 100%;";
 buttonElement3.style.cssText = "display: block; width: 100%;";
 buttonElement4.style.cssText = "display: block; width: 100%;border-radius: 0; padding: 15px;background: #3D5AFF;";
 console.log(buttonElement4 , "asdasad");
+ 

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Page Title -->
+    <title>Abdo Web Design - Shopify</title>
+    <!-- Meta Tags -->
+    <meta name="description" content="Elevate your Shopify brand with high-converting landing pages and expert Shopify CRO. Specializing in full conversion rate optimization to maximize your online sales." />
+    <meta name="keywords" content="web design, landing pages, Shopify, conversion rate optimization, CRO, website development, e-commerce, high converting, digital marketing, responsive design, user experience" />
+    <meta name="author" content="Abdo Web Design - Shopify" />
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Favicon & Icons Start -->
+    <link rel="icon" href="images/1oycso16i4pbn.png" sizes="any" />
+    <!-- <link rel="icon" id="icon" href="images/icon.svg" type="image/svg+xml" /> -->
+    <link rel="apple-touch-icon" href="images/1oycso16i4pbn.png" />
+    <link rel="manifest" href="images/favicon/manifest.webmanifest" />
+    <!-- Favicon & Icons End -->
+    <!-- Facebook Metadata Start -->
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:title" content="Abdo Web Design - Shopify" />
+    <meta property="og:description" content="Elevate your Shopify brand with high-converting landing pages and expert Shopify CRO. Specializing in full conversion rate optimization to maximize your online sales." />
+    <meta property="og:url" content="http://abdowebdesign.com/" />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <!-- Facebook Metadata End -->
+    <!-- Styles Start -->
+    <link rel="stylesheet" type="text/css" href="css/loader.css" />
+    <link rel="stylesheet" type="text/css" href="css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Styles End -->
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#BABEC8" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141414" />
+    <meta name="msapplication-navbutton-color" content="#141414" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Custom Browser Color End -->
+  </head>
+  <body>
+    <!-- <audio loop volume="1" id="myBackgroundMusic" autoplay>
+      <source src="./images/we.mp3" type="audio/mpeg" />
+    </audio> -->
+    <script>
+      window.onload = function () {
+        var pageTitle = document.title;
+        var attentionMessage = "*You miss me? 👀";
+        var blinkEvent = null;
+        document.addEventListener("visibilitychange", function (e) {
+          var isPageActive = !document.hidden;
+          if (!isPageActive) {
+            setTimeout(() => {
+              blink();
+            }, 7100);
+          } else {
+            document.title = pageTitle;
+          }
+        });
+
+        function blink() {
+          if (document.title === attentionMessage) {
+            document.title = pageTitle;
+          } else {
+            document.title = attentionMessage;
+          }
+        }
+      };
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W5SEH4DNFB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W5SEH4DNFB");
+    </script>
+
+    <!-- Loader Start -->
+    <div id="loader" class="loader">
+      <div class="loader__wrapper">
+        <div class="loader__content">
+          <div class="loader__count">
+            <span class="count__text">0</span>
+            <span class="count__percent">%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Loader End -->
+    <!-- Announcement bar -->
+    <!-- <div id="asd" class=" d-flex justify-content-center loading__fade" style="font-weight: 500; opacity: 1;position: absolute;top: 0;width: 100%;color: black;background: #d5bd73;left: 0;">80% Off This October – 2 Slots Left!</div> -->
+    <!-- Header Start -->
+    <header id="header" class="header d-flex justify-content-center loading__fade">
+      <!-- Navigation Menu Start -->
+      <div class="header__navigation d-flex justify-content-start">
+        <nav id="menu" class="menu">
+          <ul class="menu__list d-flex justify-content-start">
+            <li class="menu__item">
+              <a class="menu__link btn" href="#home">
+                <span class="menu__caption">Home</span>
+                <i class="ph ph-house-simple"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#solution">
+                <span class="menu__caption">Solution</span>
+                <i class="fa fa-cog"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#about">
+                <span class="menu__caption">About</span>
+                <i class="ph ph-user"></i>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link btn" href="#portfolio">
+                <span class="menu__caption">Portfolio</span>
+                <i class="ph ph-squares-four"></i>
+              </a>
+            </li>
+            <!-- <li class="menu__item">
+              <a class="menu__link btn" href="#services">
+                <span class="menu__caption">Process</span>
+                <i class="ph ph-sticker"></i>
+              </a>
+            </li> -->
+            <!-- <li class="menu__item"><a class="menu__link btn" href="#resume"><span class="menu__caption">Resume</span><i class="ph ph-article"></i></a></li> -->
+            <li class="menu__item">
+              <a class="menu__link btn" href="#pricing">
+                <span class="menu__caption">Pricing</span>
+                <i class="fa fa-usd"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Navigation Menu End -->
+    </header>
+    <!-- Header End -->
+    <!-- Fixed Logo Start -->
+    <div class="logo loading__fade" style="height: 6rem">
+      <a href="/shopify" class="logo__link">
+        <span class="logo-text" style="display: block"
+          >Abdo Web Design
+          <i class="fw-bold" style="display: block !important; width: 100% !important; text-align: center; font-style: italic; color: rgb(84 245 63)"> Shopify </i>
+        </span>
+        <!-- <img src="./images/my-logo.png" alt=""> -->
+        <img src="images/1oycso16i4pbn.png" style="position: absolute; opacity: 0.5; z-index: -1; width: 60px; left: 50%; transform: translateX(-50%)" alt="" />
+      </a>
+    </div>
+    <!-- Fixed Logo End -->
+    <!-- Fixed Color Switch Start -->
+    <div class="color loading__fade">
+      <!-- <button id="color-switcher" class="color-switcher" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button> -->
+      <a href="#pricing"> BOOK A CALL </a>
+      <!-- Cal floating-popup embed code begins -->
+    </div>
+ 
+ 
+    <!-- Page Content Start -->
+    <main id="page-content" class="page-content">
+      <!-- Main Section Start -->
+      <section id="home" class="main home">
+        <!-- Main Section Intro Start -->
+        <div class="main__intro">
+          <!-- Intro Background Start -->
+          <div class="intro__background intro-bg-01">
+            <div class="intro-bg-01__01" data-speed="0.6">
+              <img src="images/1200x1200_bg01.webp" alt="Background Objects" />
+              <div class="intro-bg__shadow"></div>
+            </div>
+            <div class="intro-bg-01__02" data-speed="0.8">
+              <img src="images/1200x1200_bg02.webp" alt="Background Objects" />
+              <div class="intro-bg__shadow"></div>
+            </div>
+          </div>
+          <!-- Intro Background End -->
+          <div class="container-fluid p-0 fullheight-desktop">
+            <div class="row g-0 fullheight-desktop align-items-xl-stretch">
+              <!-- Intro Data Line #1 (if needed) Start -->
+              <div class="col-12 col-xl-2"></div>
+              <!-- Intro Data Line #1 (if needed) End -->
+              <!-- Intro Content Start -->
+              <div class="col-12 col-xl-8 fullheight-desktop">
+                <!-- Headline Start -->
+                <div id="headline" class="headline d-flex align-items-start flex-column loading-wrap">
+                  <p class="headline__subtitle space-top loading__item"><a href="/shopify" style="text-decoration: underline;">Home</a> / Blogs</p>
+                  <h1 class="headline__title loading__item">Blogs That <br> Shouldn't be Free</h1>
+                  <p class="headline__subtitle space-bottom loading__item fs-1 mb-0" >
+                        <strong>Short and exciting blogs⚡</strong>
+                        sharing all my 3+ years <br> expirience in working with over 30 
+                        <i class="fw-bold" style=" width: 100% !important; text-align: center; font-style: italic; color: rgb(84 245 63)"> Shopify </i> Brands
+                  </p>
+                                    <!-- Logo Slider Start -->
+                                    <div class="logo-slider loading__fade">
+                                      <div class="logo-slider__wrapper">
+                                        <div class="logo-slider__container">
+                                          <img src="images/alcove_logo.png" style="margin-top: 0 !important" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/mdn_logo 1.svg" style="width: 80px" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/capsul-logo_1.svg" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/jk-logo 1.webp" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/std_logo.webp" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/nom-descriptif-noir-2.svg" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/kn_logo.png" style="width: 100px; margin-top: 0 !important" alt="Logo 1" class="logo-slider__image" />
+                                          <!-- repeat -->
+                                          <img src="images/alcove_logo.png" style="margin-top: 0 !important" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/mdn_logo 1.svg" style="width: 80px" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/capsul-logo_1.svg" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/jk-logo 1.webp" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/std_logo.webp" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/nom-descriptif-noir-2.svg" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/kn_logo.png" style="width: 100px; margin-top: 0 !important" alt="Logo 1" class="logo-slider__image" />
+                                          <!-- repeat -->
+                                          <img src="images/alcove_logo.png" style="margin-top: 0 !important" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/mdn_logo 1.svg" style="width: 80px" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/capsul-logo_1.svg" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/jk-logo 1.webp" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/std_logo.webp" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/nom-descriptif-noir-2.svg" alt="Logo 1" class="logo-slider__image" />
+                                          <img src="images/kn_logo.png" style="width: 100px; margin-top: 0 !important" alt="Logo 1" class="logo-slider__image" />
+                                          <!-- repeat -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- Logo Slider End -->
+                  <div class="headline__btn loading__item m-0">
+                    <a class="btn btn-line-small icon-right slide-right-down" href="#blogpost">
+                      <span class="btn-caption">See Blogs</span>
+                      <i class="ph ph-arrow-down-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- Headline End -->
+              </div>
+              <div class="col-12 col-xl-2"></div>
+              <div class="col-12 col-xl-2"></div>
+              <div class="col-12 col-xl-8"></div>
+              <!-- Intro Data Line #2 (if needed) End -->
+            </div>
+          </div>
+        </div>
+        <!-- Main Section Intro End -->
+        <!-- Main Section Media Start -->
+        <div class="main__media media-grid-bottom blogpost" id="blogpost">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+   
+              <div class="col-12 col-xl-2"></div>
+              <div class="col-12 col-xl-8">
+                <div class="inner__content">
+                  <div class="content__block">
+
+                    <div class="container p-0">
+                      <div class="row g-0">
+                   
+                        <div class="col-12 blogs-card  animate-in-up">
+                          <a href="./shopify-liquid-explained.html" class="d-block divider divider-image  mt-5 mb-2" style="height: fit-content;"> 
+                            <img src="images/liquid-blog-thumbnail.png" alt="">
+                          </a>
+                          <a href="./shopify-liquid-explained.html"  class="blog-body blog-title ">
+                            <p>Shopify Liquid.. Explained</p>
+                            <div class="blogs_post-info">
+                              <span>
+                                Abdo Ali 11/22/2024
+                              </span>
+                              <span class="read-est">
+                                <strong>Reading Est:</strong> 3 Minutes
+                              </span>
+                            </div>
+                            </a>
+                         </div>
+                         <div class="col-md-12 col-12 reveal-type">
+
+                        </div>
+                        </div>
+ 
+                      
+                      </div>
+                    </div>
+                    <div class="container-fluid p-0">
+                      <div class="row g-0">
+
+                      </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-2"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Main Section Media End -->
+      </section>
+      <!-- Main Section End -->
+
+    
+ 
+      <!-- Main Section End -->
+      <!-- Inner Section - Portfolio - Start -->
+ 
+      <section id="pricing" class="inner inner-grid-bottom pricing">
+        <div class="inner__wrapper">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+              <div class="col-12 col-xl-2">
+                <div class="inner__name">
+                  <div class="content__block name-block">
+                    <span class="section-name icon-right animate-in-up">
+                      <span class="section-name-caption">Pricing</span>
+                      <i class="ph ph-arrow-down-right"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-8">
+                <div class="inner__content">
+                  <div class="content__block section-grid-text-title">
+                    <div class="block__descr">
+                      <h2 class="reveal-type animate-in-up">It's time to put your store on Steroids</h2>
+                    </div>
+                  </div>
+                  <div class="content__block pricing-block">
+                    <div class="pricing-option">
+                      <h3 class="pricing-title">Store Wide CRO</h3>
+                      <!-- <div class="d-flex gap-3">
+                                  <p class="pricing-discount">80% off</p>
+                                  <p class="ends  pricing-discount">ends in <span class="days-left"></span> days</p>
+                                </div> -->
+                      <!-- <p class="pricing-discount">80% off ends in <span class="days-left"></span> days</p> -->
+                      <p class="pricing-discount">Effective, Data-Driven</p>
+                      <p class="pricing-price">
+                        <span class="current-price">$1000</span>
+                        <!-- <s>$5000</s> -->
+                      </p>
+                      <ul class="pricing-features">
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Conversion-Focused ⚡ Redesign
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Irresistible offer creation
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Sales Magnet Copywriting
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Aesthetic, Beautiful Branding
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Pixel Perfect Development
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Unlimited Revisions
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Daily progress updates
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Access to the progress portal
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Work Directly With Abdo
+                        </li>
+                      </ul>
+                      <a href="https://cal.com/abdowebdesign/30min" class="cta-button">Book a call with ABDO</a>
+                    </div>
+                    <div class="pricing-option">
+                      <h3 class="pricing-title">Monthly Retainer</h3>
+                      <p class="pricing-discount">Fast, Frictionless, Reliable</p>
+                      <p class="pricing-price">
+                        <span class="current-price">$500/mo</span>
+                        <!-- <s>$2500/mo</s>  -->
+                      </p>
+                      <ul class="pricing-features">
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> One request at a time
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> ⚡Design, copy, development
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Landing Pages
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> High Converting Product descriptions
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> A/B Testing 
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Weekly Detailed Audit
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> 24h average delivery
+                        </li>
+                        <li>
+                        <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Expert project management
+                      </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Access to progress portal with request tab unlocked
+                        </li>
+                        <li>
+                          <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19l-7-7 1.41-1.41L9 16.17l12.59-12.59L23 5l-14 14z" /></svg> Work Directly With Abdo
+                        </li>
+                      </ul>
+                      <a href="https://cal.com/abdowebdesign/30min" class="cta-button">Book a call with ABDO</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="faq" class="inner faq inner-grid-bottom no-padding-bottom">
+        <div class="inner__wrapper">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+              <div class="col-12 col-xl-2">
+                <div class="inner__name">
+                  <div class="content__block name-block">
+                    <span class="section-name icon-right animate-in-up">
+                      <span class="section-name-caption">FAQ</span>
+                      <i class="ph ph-arrow-down-right"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-8">
+                <div class="inner__content">
+                  <div class="content__block section-title">
+                    <div class="block__descr">
+                      <h2 class="reveal-type animate-in-up">Frequently Asked Questions</h2>
+                      <p class="h2__text text-twothirds type-basic-160lh animate-in-up">Here are some common questions i usually get asked. If you have further questions, don't hesitate to reach out at <a href="mailto:abdo@abdowebdesign.com">abdo@abdowebdesign.com</a> </p>
+                    </div>
+                  </div>
+                  <!-- Content Block - FAQ Start -->
+                  <div class="content__block grid-block pre-grid-items">
+                    <div class="faq-container">
+                      <!-- FAQ Item Start -->
+                      <div class="faq-item open">
+                        <h3 class="faq-question" onclick="toggleFAQ(this)">
+                          How long does the process take?
+                          <span class="faqicon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier"><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                            </svg>
+                          </span>
+                        </h3>
+                        <p class="faq-answer">A fully optimized Store can take between 1 to 2 weeks for copy design and development. You will be updated daily with the progress of the project and the estimated remaining time.</p>
+                      </div>
+                      <!-- FAQ Item End -->
+                      <!-- FAQ Item Start -->
+                      <div class="faq-item">
+                        <h3 class="faq-question" onclick="toggleFAQ(this)">
+                          How are you so fast and so good at the same time?
+                          <span class="faqicon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier"><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                            </svg>
+                          </span>
+                        </h3>
+                        <p class="faq-answer">the tight deadlines when working for companies and agencies forced me to deliver high-quality work at a fast speed. I did lose some hair as a cost of that 😄, but it taught me how to deliver high-quality service on time.</p>
+                      </div>
+                      <!-- FAQ Item End -->
+                      <!-- FAQ Item Start -->
+                      <div class="faq-item">
+                        <h3 class="faq-question" onclick="toggleFAQ(this)">
+                          How could you be so young and so good at the same time?
+                          <span class="faqicon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier"><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                            </svg>
+                          </span>
+                        </h3>
+                        <p class="faq-answer">Simple: I started early, learned a lot, and received mentorship. I was hard-working and paid attention to the details.</p>
+                      </div>
+                      <!-- FAQ Item End -->
+                      <!-- FAQ Item Start -->
+                      <div class="faq-item">
+                        <h3 class="faq-question" onclick="toggleFAQ(this)">
+                          Why not hire a reputable agency?
+                          <span class="faqicon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier"><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                            </svg>
+                          </span>
+                        </h3>
+                        <p class="faq-answer">Hiring a reputable agency is a great option, but I’ve worked for many agencies and found that projects can often get dragged out, as their focus is split across many projects.</p>
+                      </div>
+                      <!-- FAQ Item End -->
+                      <!-- FAQ Item Start -->
+                      <!-- <div class="faq-item">
+                                  <h3 class="faq-question" onclick="toggleFAQ(this)">
+                                    Why did you choose Shopify to become an expert at it?
+                                    <span class="faqicon">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                    </span>
+                                  </h3>
+                                  <p class="faq-answer">Well, to think of it… I didn’t choose Shopify, Shopify chose me! The overtime hours and my last job played a huge role in my decision to start abdowebdesign.com.</p>
+                              </div> -->
+                      <!-- FAQ Item End -->
+                    </div>
+                  </div>
+                  <!-- Content Block - FAQ End -->
+                </div>
+              </div>
+              <!-- Inner Section Content End -->
+              <div class="col-12 col-xl-2"></div>
+              <!-- Inner Section Aside End -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inner Section - Resume - Start -->
+      <section id="resume" class="inner inner-grid-bottom resume">
+        <div class="inner__wrapper">
+          <div class="container-fluid p-0">
+            <div class="row g-0 mb-0">
+              <!-- Inner Section Name Start -->
+              <div class="col-12 col-xl-2">
+                <div class="inner__name">
+                  <!-- Content Block - Section Name Start -->
+                  <div class="content__block name-block">
+                    <span class="section-name icon-right animate-in-up">
+                      <span class="section-name-caption">Accounts</span>
+                      <i class="ph ph-arrow-down-right"></i>
+                    </span>
+                  </div>
+                  <!-- Content Block - Section Name Start -->
+                </div>
+              </div>
+              <!-- Inner Section Name End -->
+
+              <!-- Inner Section Content Start -->
+              <div class="col-12 col-xl-8">
+                <div class="inner__content">
+
+
+                  <div class="content__block section-tagline-title">
+                    <div class="block__descr">
+                      <h2 class="reveal-type animate-in-up">The digital journey</h2>
+                    </div>
+                  </div>
+                  <!-- Content Block - H2 Section Title End -->
+                  <div class="content__block grid-block pre-text-items">
+                    <!-- Section Subtitle Start -->
+                    <div class="block__subtitle grid-block-subtitle">
+                      <p class="tagline-chapter animate-in-up">Resources</p>
+                    </div>
+                    <!-- Section Subtitle End -->
+
+                    <!-- Tools Cards Start -->
+                    <div class="tools-cards d-flex justify-content-start flex-wrap">
+                      <!-- tools single item -->
+                      <a href="https://www.youtube.com/@abdowebdesign" target="_blank" class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/youtube-svgrepo-com (1).svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">Learn CRO with Abdo</h6>
+                        </div>
+                      </a>
+                      <!-- tools single item -->
+                      <a href="https://www.figma.com/file/sQ4KFKfboMe2vpPaVBDlBp/Swipe-File?embed_host=oembed&kind=file&page-selector=0&t=4ne6VucLSaBkEYAd-0&viewer=1" target="_blank" class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/icon-figma.svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">Swibe File</h6>
+                        </div>
+                      </a> 
+                      <!-- tools single item -->
+                      <!-- <div class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/icon-notion.svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">Notion</h6>
+                        </div>
+                      </div> -->
+                    </div>
+                    <!-- Tools Cards End -->
+                  </div>
+                  <!-- Content Block - Tools Cards Start -->
+                  <div class="content__block grid-block pre-text-items">
+                    <!-- Section Subtitle Start -->
+                    <div class="block__subtitle grid-block-subtitle">
+                      <p class="tagline-chapter animate-in-up">My favourite tools</p>
+                    </div>
+                    <!-- Section Subtitle End -->
+
+                    <!-- Tools Cards Start -->
+                    <div class="tools-cards d-flex justify-content-start flex-wrap">
+                      <!-- tools single item -->
+                      <div class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/shopify.svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">Shopify</h6>
+                        </div>
+                      </div>
+                      <!-- tools single item -->
+                      <div class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/icon-figma.svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">Figma</h6>
+                        </div>
+                      </div>
+                      <!-- tools single item -->
+                      <div class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/icon-notion.svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">Notion</h6>
+                        </div>
+                      </div>
+                      <!-- tools single item -->
+                      <!-- <div class="tools-cards__item d-flex grid-item animate-card-4">
+                            <div class="tools-cards__card">
+                              <img class="tools-cards__icon animate-in-up" src="images/icon-html.svg" alt="Tools Icon">
+                              <h6 class="tools-cards__caption tagline-tool animate-in-up">HTML5</h6>
+                            </div>
+                          </div> -->
+                      <!-- tools single item -->
+                      <div class="tools-cards__item d-flex grid-item animate-card-4">
+                        <div class="tools-cards__card">
+                          <img class="tools-cards__icon animate-in-up" src="images/icon-css.svg" alt="Tools Icon" />
+                          <h6 class="tools-cards__caption tagline-tool animate-in-up">CSS3</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tools Cards End -->
+                  </div>
+ 
+
+                </div>
+              </div>
+
+              <div class="col-12 col-xl-2"></div>
+            </div>
+          </div>
+
+          <div class="container-fluid p-0">
+            <div class="row g-0 justify-content-center">
+              <div class="col-12 col-xl-8">
+                <!-- <div class="content__block grid-block"><div class="container-fluid p-0 contact-data"><div class="row g-0"><div class="col-12 col-md-6 col-lg-3 contact-data__item grid-item"><p class="contact-data__title tagline-chapter animate-in-up">Location</p><p class="contact-data__text small type-basic-160lh"><a class="link-small-160lh animate-in-up" target="_blank">Sharja, UAE<br>65000</a></p></div><div class="col-12 col-md-6 col-lg-3 contact-data__item grid-item"><p class="contact-data__title tagline-chapter animate-in-up">Location</p><p class="contact-data__text small type-basic-160lh"><a class="link-small-160lh animate-in-up" target="_blank">Aleppo, Syria<br>02000</a></p></div><div class="col-12 col-md-6 col-lg-3 contact-data__item grid-item"><p class="contact-data__title tagline-chapter animate-in-up">Phone</p><p class="contact-data__text small type-basic-160lh"><a class="link-small-160lh animate-in-up" href="https://wa.link/3i3k60">+963 939 892 936</a><br><a class="link-small-160lh animate-in-up" href="tel:+15104570211">+971-551-153-9320</a></p></div><div class="col-12 col-md-6 col-lg-3 contact-data__item grid-item"><p class="contact-data__title tagline-chapter animate-in-up">Email</p><p class="contact-data__text small type-basic-160lh"><a class="link-small-160lh animate-in-up" href="mailto:abdo@abdowebdesign.com?subject=Message%20from%20your%20site">hello@example.com</a><br><a class="link-small-160lh animate-in-up" href="mailto:abdo@abdowebdesign.com?subject=Message%20from%20your%20site">support@example.com</a></p></div></div></div></div> -->
+
+                <div class="content__block">
+                  <div class="block__subtitle">
+                    <p class="tagline-chapter animate-in-up">Social media</p>
+                  </div>
+                  <ul class="socials-lines d-flex flex-column">
+                    <li class="socials-lines__item">
+                      <div class="socials-lines__divider animate-in-up"></div>
+                      <a class="socials-lines__link d-flex align-items-center justify-content-between" href="https://x.com/abdowebdesign/" target="_blank">
+                        <h4 class="animate-in-up">Twitter (X)</h4>
+                        <div class="socials-lines__icon d-flex animate-in-up">
+                          <i class="ph ph-arrow-up-right"></i>
+                        </div>
+                      </a>
+                      <div class="socials-lines__divider animate-in-up"></div>
+                    </li>
+                    <li class="socials-lines__item">
+                      <a class="socials-lines__link d-flex align-items-center justify-content-between" href="https://www.instagram.com/theabdozen/" target="_blank">
+                        <h4 class="animate-in-up">Instagram</h4>
+                        <div class="socials-lines__icon d-flex animate-in-up">
+                          <i class="ph ph-arrow-up-right"></i>
+                        </div>
+                      </a>
+                      <div class="socials-lines__divider animate-in-up"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="content__block no-padding section-tagline-title">
+                  <div class="items items--gsap">
+                    <div class="items__container">
+                      <div class="item item-regular text">
+                        <p class="item__text">Follow me</p>
+                        <div class="item__image">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
+                            <g>
+                              <rect x="45.7" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.8412 -0.5407 0.5407 0.8412 -17.8476 32.3497)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.4155 -0.9096 0.9096 0.4155 -15.3764 69.2119)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9898 -0.1425 0.1425 0.9898 -6.1646 7.0506)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.7556 -0.655 0.655 0.7556 -19.2157 41.618)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.2812 -0.9597 0.9597 0.2812 -11.5032 77.7858)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.9595 -0.2817 0.2817 0.9595 -11.2479 14.8866)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.6549 -0.7557 0.7557 0.6549 -19.2631 50.9572)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.1423 -0.9898 0.9898 0.1423 -6.4999 85.629)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9097 -0.4153 0.4153 0.9097 -15.1716 23.381)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.5411 -0.8409 0.8409 0.5411 -17.9774 60.1901)" class="st0" width="93.1" height="1"></rect>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="item item-regular text">
+                        <p class="item__text">Follow me</p>
+                        <div class="item__image">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
+                            <g>
+                              <rect x="45.7" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.8412 -0.5407 0.5407 0.8412 -17.8476 32.3497)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.4155 -0.9096 0.9096 0.4155 -15.3764 69.2119)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9898 -0.1425 0.1425 0.9898 -6.1646 7.0506)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.7556 -0.655 0.655 0.7556 -19.2157 41.618)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.2812 -0.9597 0.9597 0.2812 -11.5032 77.7858)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.9595 -0.2817 0.2817 0.9595 -11.2479 14.8866)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.6549 -0.7557 0.7557 0.6549 -19.2631 50.9572)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.1423 -0.9898 0.9898 0.1423 -6.4999 85.629)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9097 -0.4153 0.4153 0.9097 -15.1716 23.381)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.5411 -0.8409 0.8409 0.5411 -17.9774 60.1901)" class="st0" width="93.1" height="1"></rect>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="item item-regular text">
+                        <p class="item__text">Follow me</p>
+                        <div class="item__image">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
+                            <g>
+                              <rect x="45.7" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.8412 -0.5407 0.5407 0.8412 -17.8476 32.3497)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.4155 -0.9096 0.9096 0.4155 -15.3764 69.2119)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9898 -0.1425 0.1425 0.9898 -6.1646 7.0506)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.7556 -0.655 0.655 0.7556 -19.2157 41.618)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.2812 -0.9597 0.9597 0.2812 -11.5032 77.7858)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.9595 -0.2817 0.2817 0.9595 -11.2479 14.8866)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.6549 -0.7557 0.7557 0.6549 -19.2631 50.9572)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.1423 -0.9898 0.9898 0.1423 -6.4999 85.629)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9097 -0.4153 0.4153 0.9097 -15.1716 23.381)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.5411 -0.8409 0.8409 0.5411 -17.9774 60.1901)" class="st0" width="93.1" height="1"></rect>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="item item-regular text">
+                        <p class="item__text">Follow me</p>
+                        <div class="item__image">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
+                            <g>
+                              <rect x="45.7" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.8412 -0.5407 0.5407 0.8412 -17.8476 32.3497)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.4155 -0.9096 0.9096 0.4155 -15.3764 69.2119)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9898 -0.1425 0.1425 0.9898 -6.1646 7.0506)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.7556 -0.655 0.655 0.7556 -19.2157 41.618)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.2812 -0.9597 0.9597 0.2812 -11.5032 77.7858)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.9595 -0.2817 0.2817 0.9595 -11.2479 14.8866)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.6549 -0.7557 0.7557 0.6549 -19.2631 50.9572)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="45.7" y="0" transform="matrix(0.1423 -0.9898 0.9898 0.1423 -6.4999 85.629)" class="st0" width="1" height="93.1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.9097 -0.4153 0.4153 0.9097 -15.1716 23.381)" class="st0" width="93.1" height="1"></rect>
+                              <rect x="-0.4" y="46.1" transform="matrix(0.5411 -0.8409 0.8409 0.5411 -17.9774 60.1901)" class="st0" width="93.1" height="1"></rect>
+                            </g>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Inner Section - Resume - End -->
+      <!-- Inner Section - Contact - Start -->
+
+      <!-- Inner Section - Contact - End -->
+
+      <footer class="absolute-footer">
+        <div>© Abdowebdesign 2024. All rights reserved.</div>
+        <!-- <div style="opacity: 0;">|</div> -->
+        <div>built with passion by ABDO</div>
+      </footer>
+    </main>
+    <!-- Page Content End -->
+    <!-- Bottom Background Images Start -->
+    <div class="bottom__background bottom-bg-01">
+      <div class="bottom-bg-01__02 animate-card-2">
+        <img src="images/1200x1200_bg01.webp" alt="background image" />
+      </div>
+      <div class="bottom-bg-01__01 animate-card-2">
+        <img src="images/1200x1200_bg01.webp" alt="background image" />
+      </div>
+    </div>
+    <!-- Bottom Background Images End -->
+    <!-- Mobile Menu Bottom Placeholder Start -->
+    <div class="header-offset"></div>
+    <!-- Mobile Menu Bottom Placeholder End -->
+    <!-- To Top Button Start -->
+    <a href="#0" id="to-top" class="btn btn-to-top slide-up">
+      <i class="ph ph-arrow-up"></i>
+    </a>
+    <a id="wp" href="https://api.whatsapp.com/send?phone=939892936"  target="_blank" class="btn btn-to-top slide-up" style="right: 10rem;">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=939892936"  target="_blank" class="btn btn-to-top slide-up news-btn" style="right: 10rem;">
+    <div>
+      Iam Free! <i class="fa fa-usd"></i>
+    </div>
+    </a>
+    <!-- To Top Button End -->
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share link-s" title="Share"></button>
+            <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/notificationEN.js"></script>
+
+    <script>
+      function addRandomNotification() {
+        // Sélectionne une notification aléatoire de la liste
+        const randomNotification = Notification(notificationsList[rnd(notificationsList.length)]);
+        const notifications = document.querySelectorAll(".Notification");
+        if (notifications.length >= 10) {
+          // Si on a déjà 10 notifications, supprime la plus ancienne (la première enfant de la liste)
+          notifications[0].remove();
+          console.log("supp");
+        }
+        // Ajoute la notification sélectionnée
+        addNotification(randomNotification);
+      }
+
+      // Démarre le processus d'ajout automatique avec un intervalle aléatoire
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ajoute quatre notifications aléatoires
+        for (let i = 0; i < 5; i++) {
+          setTimeout(function () {
+            addRandomNotification();
+          }, i * 100); // Augmente le délai pour chaque notification
+        }
+
+        // Votre code existant pour démarrer le processus d'ajout automatique...
+        (function loop() {
+          var rand = Math.round(Math.random() * (1000 - 100)) + 500; // Génère un délai aléatoire entre 500 et 1500 ms
+          setTimeout(function () {
+            addRandomNotification(); // Ajoute une notification aléatoire
+            loop();
+          }, rand);
+        })();
+      });
+    </script>
+    <script>
+      function updateDaysLeft() {
+        const today = new Date();
+        const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+        const daysLeft = Math.ceil((lastDayOfMonth - today) / (1000 * 60 * 60 * 24));
+
+        const elements = document.querySelectorAll(".days-left");
+        elements.forEach((element) => {
+          element.textContent = daysLeft;
+        });
+      }
+
+      updateDaysLeft();
+    </script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/gallery-init.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
