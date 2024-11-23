@@ -646,38 +646,38 @@ $(function() {
   // --------------------------------------------- //
   // Contact Form Start
   // --------------------------------------------- //
-  $("#banner-form").submit(function() { //Change
+  $("#modal1").submit(function() { //Change
     var th = $(this);
     $.ajax({
       type: "POST",
       url: "mail.php", //Change
       data: th.serialize()
     }).done(function() {
-      $('#banner-form').find('.form').addClass('is-hidden');
-      $('#banner-form').find('.form__reply').addClass('is-visible');
+      $('#modal1').find('.form').addClass('is-hidden');
+      $('#modal1').find('.form__reply').addClass('is-visible');
       setTimeout(function() {
         // Done Functions
-        $('#banner-form').find('.form__reply').removeClass('is-visible');
-        $('#banner-form').find('.form').delay(300).removeClass('is-hidden');
+        $('#modal1').find('.form__reply').removeClass('is-visible');
+        $('#modal1').find('.form').delay(300).removeClass('is-hidden');
         th.trigger("reset");
       }, 5000);
     });
     return false;
   });
-  $("#audit-form").submit(function() { //Change
+  $("#modal").submit(function() { //Change
     var th = $(this);
     $.ajax({
       type: "POST",
       url: "mail.php", //Change
       data: th.serialize()
     }).done(function() {
-      $('#audit-form').find('.form').addClass('is-hidden');
-      $('#audit-form').find('.form__reply').addClass('is-visible');
-      console.log($('#audit-form').find('.form__reply'));
+      $('#modal').find('.form').addClass('is-hidden');
+      $('#modal').find('.form__reply').addClass('is-visible');
+      console.log($('#modal').find('.form__reply'));
       setTimeout(function() {
         // Done Functions
-        $('#audit-form').find('.form__reply').removeClass('is-visible');
-        $('#audit-form').find('.form').delay(300).removeClass('is-hidden');
+        $('#modal').find('.form__reply').removeClass('is-visible');
+        $('#modal').find('.form').delay(300).removeClass('is-hidden');
         th.trigger("reset");
       }, 5000);
     });
