@@ -1491,7 +1491,7 @@ position: fixed;
   
 .modal.active {
   opacity: 1;
-  top: 12%;
+  top: 5%;
   width: 95%;
   left: 2.5%;
   padding-bottom: 0;
