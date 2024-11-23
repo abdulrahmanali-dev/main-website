@@ -646,6 +646,42 @@ $(function() {
   // --------------------------------------------- //
   // Contact Form Start
   // --------------------------------------------- //
+  $("#banner-form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      $('#banner-form').find('.form').addClass('is-hidden');
+      $('#banner-form').find('.form__reply').addClass('is-visible');
+      setTimeout(function() {
+        // Done Functions
+        $('#banner-form').find('.form__reply').removeClass('is-visible');
+        $('#banner-form').find('.form').delay(300).removeClass('is-hidden');
+        th.trigger("reset");
+      }, 5000);
+    });
+    return false;
+  });
+  $("#audit-form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      $('#audit-form').find('.form').addClass('is-hidden');
+      $('#audit-form').find('.form__reply').addClass('is-visible');
+      setTimeout(function() {
+        // Done Functions
+        $('#audit-form').find('.form__reply').removeClass('is-visible');
+        $('#audit-form').find('.form').delay(300).removeClass('is-hidden');
+        th.trigger("reset");
+      }, 5000);
+    });
+    return false;
+  });
   $("#contact-form").submit(function() { //Change
     var th = $(this);
     $.ajax({
@@ -661,6 +697,7 @@ $(function() {
         $('.contact').find('.form').delay(300).removeClass('is-hidden');
         th.trigger("reset");
       }, 5000);
+      
     });
     return false;
   });
