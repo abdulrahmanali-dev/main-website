@@ -1510,3 +1510,20 @@ section {
 .Newsletter-check {
 
 }
+
+.modal-close-button {
+  position: absolute;
+  top: -17px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  font-size: 55px;
+  z-index: 123;
+}
+
+.modal-close-button:hover {
+  color: #ff0000; /* Change color on hover */
+}

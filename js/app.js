@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const button1 = document.getElementById("audit_btn1");
 
   const loadingFades = document.querySelectorAll(".loading__fade");
+  const closeButtons = document.querySelectorAll(".modal-close-button");
 
   const setZIndex = (zIndex) => {
     loadingFades.forEach((element) => {
@@ -34,26 +35,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   overlay.addEventListener("click", function () {
-    modal.classList.remove("active");
-    overlay.classList.remove("active");
-    setTimeout(() => {
-      overlay.classList.add("hidden");
-      modal.classList.add("hidden");
-    }, 300); // Match the CSS transition duration
-
-    setZIndex(""); // Reset z-index when modal is inactive
+    closeAllModals();
   });
 
   overlay1.addEventListener("click", function () {
+    closeAllModals();
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      closeAllModals();
+    });
+  });
+
+  function closeAllModals() {
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
     modal1.classList.remove("active");
     overlay1.classList.remove("active");
+
     setTimeout(() => {
+      overlay.classList.add("hidden");
+      modal.classList.add("hidden");
       overlay1.classList.add("hidden");
       modal1.classList.add("hidden");
     }, 300); // Match the CSS transition duration
 
-    setZIndex(""); // Reset z-index when modal1 is inactive
-  });
+    setZIndex(""); // Reset z-index when all modals are inactive
+  }
 });
 
 /*! ------------------------------------------------
