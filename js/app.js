@@ -646,6 +646,44 @@ $(function() {
   // --------------------------------------------- //
   // Contact Form Start
   // --------------------------------------------- //
+  $("#contact-form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      $('.contact').find('.form').addClass('is-hidden');
+      $('.contact').find('.form__reply').addClass('is-visible');
+      setTimeout(function() {
+        // Done Functions
+        $('.contact').find('.form__reply').removeClass('is-visible');
+        $('.contact').find('.form').delay(300).removeClass('is-hidden');
+        th.trigger("reset");
+      }, 5000);
+      
+    });
+    return false;
+  });
+  $("#modal").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      $('.pricing').find('.form').addClass('is-hidden');
+      $('.pricing').find('.form__reply').addClass('is-visible');
+      console.log($('.pricing').find('.form__reply'));
+      setTimeout(function() {
+        // Done Functions
+        $('.pricing').find('.form__reply').removeClass('is-visible');
+        $('.pricing').find('.form').delay(300).removeClass('is-hidden');
+        th.trigger("reset");
+      }, 5000);
+    });
+    return false;
+  });
   $("#modal1").submit(function() { //Change
     var th = $(this);
     $.ajax({
@@ -664,25 +702,7 @@ $(function() {
     });
     return false;
   });
-  $("#modal").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      $('#modal').find('.form').addClass('is-hidden');
-      $('#modal').find('.form__reply').addClass('is-visible');
-      console.log($('#modal').find('.form__reply'));
-      setTimeout(function() {
-        // Done Functions
-        $('#modal').find('.form__reply').removeClass('is-visible');
-        $('#modal').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
-    });
-    return false;
-  });
+
 
   // --------------------------------------------- //
   // Contact Form End
