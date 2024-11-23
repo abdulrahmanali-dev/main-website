@@ -645,63 +645,39 @@ $(function() {
 
   // --------------------------------------------- //
   // Contact Form Start
-  // --------------------------------------------- //
-  $("#contact-form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      $('.contact').find('.form').addClass('is-hidden');
-      $('.contact').find('.form__reply').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.contact').find('.form__reply').removeClass('is-visible');
-        $('.contact').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
+
+// Generic handler for all modals
+$(".modal form").submit(function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  var th = $(this); // Current form
+  var modal = th.closest(".modal"); // Find the closest modal containing the form
+
+  $.ajax({
+    type: "POST",
+    url: "mail.php", // Change to your PHP script path
+    data: th.serialize(),
+  })
+    .done(function () {
+      // Hide form and show reply message in the corresponding modal
+      modal.find(".form").addClass("is-hidden");
+      modal.find(".form__reply").addClass("is-visible");
+
+      setTimeout(function () {
+        // Reset the form and restore visibility after 5 seconds
+        modal.find(".form__reply").removeClass("is-visible");
+        modal.find(".form").delay(300).removeClass("is-hidden");
+        th.trigger("reset"); // Reset form fields
       }, 5000);
-      
+    })
+    .fail(function () {
+      // Optional error handling
+      alert("An error occurred. Please try again.");
     });
-    return false;
-  });
-  $("#modal").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      $('.pricing').find('.form').addClass('is-hidden');
-      $('.pricing').find('.form__reply').addClass('is-visible');
-      console.log($('.pricing').find('.form__reply'));
-      setTimeout(function() {
-        // Done Functions
-        $('.pricing').find('.form__reply').removeClass('is-visible');
-        $('.pricing').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
-    });
-    return false;
-  });
-  $("#modal1").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      $('#modal1').find('.form').addClass('is-hidden');
-      $('#modal1').find('.form__reply').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('#modal1').find('.form__reply').removeClass('is-visible');
-        $('#modal1').find('.form').delay(300).removeClass('is-hidden');
-        th.trigger("reset");
-      }, 5000);
-    });
-    return false;
-  });
+
+  return false; // Prevent page reload
+});
+
 
 
   // --------------------------------------------- //
