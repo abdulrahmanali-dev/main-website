@@ -1513,8 +1513,8 @@ section {
 
 .modal-close-button {
   position: absolute;
-  top: -17px;
-  right: -10px;
+  top: 0;
+  right: 5px;
   background: transparent;
   border: none;
   font-size: 24px;
