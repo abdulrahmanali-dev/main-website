@@ -9,10 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const loadingFades = document.querySelectorAll(".loading__fade");
   const closeButtons = document.querySelectorAll(".modal-close-button");
+  const sections = document.querySelectorAll("section"); // Select all section elements
 
   const setZIndex = (zIndex) => {
     loadingFades.forEach((element) => {
       element.style.zIndex = zIndex; // Apply z-index to each element directly
+    });
+  };
+
+  const addSectionIndexClass = () => {
+    sections.forEach((section) => {
+      section.classList.add("section-index");
+    });
+  };
+
+  const removeSectionIndexClass = () => {
+    sections.forEach((section) => {
+      section.classList.remove("section-index");
     });
   };
 
@@ -23,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.remove("hidden");
 
     setZIndex("3"); // Set z-index to 3 when modal is active
+    addSectionIndexClass(); // Add the section-index class to all sections
   });
 
   button1.addEventListener("click", function () {
@@ -32,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal1.classList.remove("hidden");
 
     setZIndex("3"); // Set z-index to 3 when modal1 is active
+    addSectionIndexClass(); // Add the section-index class to all sections
   });
 
   overlay.addEventListener("click", function () {
@@ -62,8 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 300); // Match the CSS transition duration
 
     setZIndex(""); // Reset z-index when all modals are inactive
+    removeSectionIndexClass(); // Remove the section-index class from all sections
   }
 });
+
 
 /*! ------------------------------------------------
  * Project Name: Blayden - Personal Portfolio & Resume HTML Template

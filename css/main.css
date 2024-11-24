@@ -1063,6 +1063,11 @@ ul.Notifications__List {
   position: relative !important;
 }
 
+.section-index {
+  position: relative;
+  z-index: -123213;
+}
+section#free,
 section#pricing {
   z-index: -1231;
 }
@@ -1470,12 +1475,14 @@ right: 7rem;
   z-index: 123213213123123112;
   border-radius: calc(var(--_radius) + -3px);
   opacity: 0;
+  pointer-events: none;
 }
 .modal {
   background-color:var(--base-tint)
 }
 .modal.active {
   top:  0;
+  pointer-events: unset;
   opacity: 1;
 }
 
