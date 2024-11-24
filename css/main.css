@@ -594,12 +594,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .pricing-option {
   width: 100%;
-  max-width:391px ;
   background: var(--base-tint);
   border: 1px solid var(--stroke-elements);
   border-radius: var(--_radius);
@@ -688,7 +686,12 @@ ul {
   /* #B99041 */
   /* background-color: #b98f418a; */
 }
-
+@media (max-width:992px) {
+  .cta-button {
+    font-size: 19px;
+  }
+  
+}
 .pricing-discount {
   font-size: 1.6rem;
   color: var(--base);
@@ -1481,7 +1484,7 @@ right: 7rem;
 height: fit-content;
 position: fixed;
 }
-#pricing  {
+#free  {
   padding-bottom: 100px;
 }
   
@@ -1497,10 +1500,6 @@ position: fixed;
   padding-bottom: 0;
 }
 
-section {
-  position: relative;
-  z-index: -12391203821;
-}
 }
 .checkbox-label.d-flex {
   font-size: 24px;
