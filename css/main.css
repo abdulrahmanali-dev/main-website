@@ -75,8 +75,8 @@
         height: 75vh;
         margin-bottom: 0;
     } */
-  .main-image-3 {
-    height: 420px;
+    .main-image-3 {
+      height: 365px;
   }
 }
 
@@ -86,7 +86,7 @@
         margin-bottom: 0;
     } */
   .main-image-3 {
-    height: 520px;
+    height: 420px;
   }
 }
 
@@ -96,7 +96,7 @@
         margin-bottom: 0;
     } */
   .main-image-3 {
-    height: 620px;
+    height: 460px;
   }
 }
 
@@ -118,7 +118,7 @@
 }
 
 .main-image-4 {
-  background-image: url(../images/SOP.webp);
+  background-image: url(../images/chrome-capture-2024-11-26.gif);
 }
 
 .absolute-footer {
@@ -162,7 +162,8 @@
   .main-image-1,
   .main-image-3,
   .main-image-4 {
-    height: 200px !important;
+    height: 187px !important;
+    margin-top: 33px;
   }
 
   .main-image-1 {
@@ -1405,7 +1406,7 @@ border: solid #b99041;
 .blog-body p{
   font-size: 18px !important;
 }
-.char:not(.leave-char .char) {
+.blogpost .char:not(.leave-char .char) {
   opacity: 1 !important;
 }
 .blogs-card span {
@@ -1506,6 +1507,22 @@ position: fixed;
   left: 2.5%;
   padding-bottom: 0;
 }
+#SOP {
+  background: black linear-gradient(1deg, #141414 2%, #ffffff00 20%);
+  padding: 170px 0 !important;
+  padding-bottom: 108px !important;
+}
+.parentcomparative {
+  display: flex;
+  flex-direction:column
+;
+}
+.div1comparative {
+  margin-bottom: 20px;
+}
+.btn-comparative a {
+  padding: 34px;
+}
 
 }
 .checkbox-label.d-flex {
@@ -1532,4 +1549,27 @@ position: fixed;
 
 .modal-close-button:hover {
   color: #ff0000; /* Change color on hover */
+}
+
+.star-reviews {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  height: 22px;
+}
+.star-reviews p  {
+  font-size: 18px;
+
+}
+.star-reviews svg  {
+  width: 18px;
+  height: 18px;
+
+}
+.reviews-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
 }
