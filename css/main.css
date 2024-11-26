@@ -1573,3 +1573,11 @@ position: fixed;
   justify-content: center;
   gap: 3px;
 }
+.Behold {
+  font-size: 19px;
+}
+@media (max-width:992px) {
+  .Behold {
+    font-size: 14px;
+  }
+}
