@@ -331,7 +331,7 @@ list-style-type: none;
 .parentcomparative {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   max-width: 1000px;
@@ -340,7 +340,7 @@ list-style-type: none;
 }
 
 .parentcomparative > div > h3 {
-  font-size: 23px;
+  font-size: 22px;
   text-transform: uppercase;
   padding: 20px 20px !important;
 }
@@ -1612,6 +1612,9 @@ position: fixed;
   padding: 5px 0;
   color: var(--t-medium);
   font-size: 10px;
+}
+.main__intro {
+  height: 105vh;
 }
     }
   
