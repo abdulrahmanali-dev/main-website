@@ -76,9 +76,10 @@
         margin-bottom: 0;
     } */
     .main-image-3 {
-      height: 365px;
+      height: 408px;
   }
 }
+
 
 @media only screen and (min-width: 1500px) {
   /* .main__intro {
@@ -372,24 +373,25 @@ list-style-type: none;
   border-radius: 20px;
   display: flex;
   justify-content: center;
+  border: solid transparent ;
+
   align-items: center;
 }
-
 .div1comparative {
   grid-area: 1 / 1 / 2 / 7;
-  border: #b99041 solid;
+  border: #b99041 solid !important;
   height: fit-content;
 }
 
 .div2comparative {
   grid-area: 2 / 1 / 6 / 7;
-  border: #b99041 solid;
+  border: #b99041 solid !important;
   padding: 15px 0;
 }
 
 .div3comparative {
   grid-area: 6 / 1 / 7 / 7;
-  border: #b99041 solid;
+  border: #b99041 solid !important;
 }
 
 .div4comparative {
@@ -1580,4 +1582,36 @@ position: fixed;
   .Behold {
     font-size: 14px;
   }
+}@media (min-width:1100px) and (max-width:1300px) {
+  .parentcomparative > div > h3 {
+    font-size: 21px;
+    text-transform: uppercase;
+    padding: 20px 20px !important;
+  }
+  .main-image-3 {
+    height: 371px;
 }
+  }
+
+  @media (min-width:1100px) and (max-width:1300px) {
+    .parentcomparative > div > h3 {
+      font-size: 21px;
+      text-transform: uppercase;
+      padding: 20px 20px !important;
+    }
+    .main-image-3 {
+      height: 371px;
+  }
+  .pricing-title {
+    font-size: 4.1rem;
+}
+.pricing-price {
+  font-size: 3.6rem;
+}
+.pricing-features li {
+  padding: 5px 0;
+  color: var(--t-medium);
+  font-size: 10px;
+}
+    }
+  
