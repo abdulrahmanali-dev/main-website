@@ -1908,6 +1908,20 @@ transform: translateX(-50%);">
 
       updateDaysLeft();
     </script>
+    <script>
+ window.addEventListener('load', function() {
+  setTimeout(function() {
+    const gifs = document.querySelectorAll('img[src$=".gif"]');
+    gifs.forEach(function(gif) {
+      const src = gif.getAttribute('data-src'); // assuming gifs have a data-src attribute
+      if (src) {
+        gif.src = src;
+      }
+    });
+  }, 3000); // Wait for 3 seconds
+});
+
+    </script>
     <script src="js/libs.min.js"></script>
     <script src="js/gallery-init.js"></script>
     <script src="js/app.js"></script>

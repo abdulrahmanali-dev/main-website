@@ -691,7 +691,7 @@ ul {
 }
 @media (max-width:992px) {
   .cta-button {
-    font-size: 19px;
+    font-size: 18px;
   }
   
 }
@@ -708,6 +708,12 @@ ul {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 768px) {
+  .pricing-discount {
+    font-size: 14px;
+
+   }
+}
 @media (min-width: 768px) {
   .pricing-block {
     flex-direction: row;
@@ -1747,4 +1753,19 @@ font-size: 14px !important;
 #blogs img {
   height: 200px;
   object-fit: cover;
+}
+
+@media (max-width:992px) {
+  #blogs img {
+    height: 160px;
+    object-fit: cover;
+  }
+  #blogs .content__block.grid-block.pre-grid-items .row {
+    padding: 0;
+
+}
+  #blogs .content__block{
+    padding: 0;
+
+}
 }
