@@ -8,3 +8,31 @@
         width: 100% !important;
     }
 }
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px white;
+    padding: 40px 20px;
+    gap: 1px;
+    text-align: left;
+}
+.review-text {
+    width:100%;
+    margin:12px 0;
+}
+
+
+.testimonial .star-reviews {
+width:100%
+}
+.testimonial h4 {
+    text-align: left;
+    width: 100%;
+}
+.testimonial .position {
+    width: 100%;
+    font-size: 14px;
+    color: gray;
+}
