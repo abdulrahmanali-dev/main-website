@@ -929,7 +929,7 @@
                <div class="row g-0">
                 <div class="col-12">
                  <!-- change the background image in the main.css file - .main-image-1 -->
-                 <div class="divider divider-image main-image-3 main-image-4 mt-100 animate-in-up"></div>
+                 <div id="gif_portal" class="divider divider-image main-image-3  mt-100 animate-in-up"></div>
                 </div>
                </div>
               </div>
@@ -1616,8 +1616,8 @@
                          </div>    
                          <div class="col-6 blogs-card  animate-in-up">
                             <div class="badge">Snippet</div>
-                            <a href="./snippets/cta-effect-sens-theme" class="d-block divider divider-image  mt-5 mb-2" style="height: fit-content;"> 
-                            <img src="images/cta_gif.gif" alt="">
+                            <a id="gif_cta" href="./snippets/cta-effect-sens-theme" class="d-block divider divider-image  mt-5 mb-2" style="height: fit-content;"> 
+                           
                           </a>
                           <a href="./snippets/cta-effect-sens-theme"  class="blog-body blog-title ">
                             <p>Add To Cart Button Effect</p>
@@ -1909,17 +1909,24 @@ transform: translateX(-50%);">
       updateDaysLeft();
     </script>
     <script>
- window.addEventListener('load', function() {
-  setTimeout(function() {
-    const gifs = document.querySelectorAll('img[src$=".gif"]');
-    gifs.forEach(function(gif) {
-      const src = gif.getAttribute('data-src'); // assuming gifs have a data-src attribute
-      if (src) {
-        gif.src = src;
-      }
-    });
-  }, 3000); // Wait for 3 seconds
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        // Add class to the element with ID gif_portal
+        const gifPortalElement = document.getElementById('gif_portal');
+        if (gifPortalElement) {
+            gifPortalElement.classList.add('main-image-4');
+        }
+
+        // Create and append an image to the element with ID gif_cta
+        const gifCtaElement = document.getElementById('gif_cta');
+        if (gifCtaElement) {
+            const newImage = document.createElement('img');
+            newImage.src = 'images/cta_gif.gif';
+            gifCtaElement.appendChild(newImage);
+        }
+    }, 5000); // 5000ms = 5 seconds
 });
+
 
     </script>
     <script src="js/libs.min.js"></script>
