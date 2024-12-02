@@ -36,6 +36,9 @@ width:100%
     font-size: 14px;
     color: gray;
 }
-.testimonials-slider  .testimonial{
-    width: 83vw;
+@media (max-width:992px) {
+    
+    .testimonials-slider  .testimonial{
+        width: 83vw;
+    }
 }
