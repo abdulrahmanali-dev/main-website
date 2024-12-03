@@ -38,6 +38,9 @@ width:100%
 .post-info-blog span:last-of-type {
     width: 50%;
 }
+#insert_loom {
+    min-height: 445px;
+}
 @media (max-width:992px) {
     .post-info-blog span:last-of-type {
         width: 61%;
@@ -45,5 +48,8 @@ width:100%
     
     .testimonials-slider  .testimonial{
         width: 83vw;
+    }
+    #insert_loom {
+        min-height: 192px;
     }
 }
