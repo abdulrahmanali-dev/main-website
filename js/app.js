@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded",(function(){const e=document.getEle
  * Last Update: June 2024
  * This product is available exclusively on Themeforest
  * Author: mix_design
- * Author URI: https://themeforest.net/user/mix_design
  * File name: app.js
  * ------------------------------------------------
 
