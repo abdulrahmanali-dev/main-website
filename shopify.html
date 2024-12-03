@@ -1318,8 +1318,8 @@
                          </div>    
                          <div class="col-6 blogs-card  animate-in-up">
                             <div class="badge">Snippet</div>
-                            <a id="gif_cta" href="./snippets/cta-effect-sens-theme" class="d-block divider divider-image  mt-5 mb-2" style="height: fit-content;"> 
-                           
+                            <a href="./snippets/cta-effect-sens-theme" class="d-block divider divider-image  mt-5 mb-2" style="height: fit-content;"> 
+                           <img src="./images/cta_thumb.png" alt="">
                           </a>
                           <a href="./snippets/cta-effect-sens-theme"  class="blog-body blog-title ">
                             <p>Add To Cart Button Effect</p>
@@ -1534,15 +1534,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (gifPortalElement) {
             gifPortalElement.classList.add('main-image-4');
         }
-
-        // Create and append an image to the element with ID gif_cta
-        const gifCtaElement = document.getElementById('gif_cta');
-        if (gifCtaElement) {
-            const newImage = document.createElement('img');
-            newImage.src = 'images/cta_gif.gif';
-            gifCtaElement.appendChild(newImage);
-        }
-
         // Insert the Loom iframe into the element with ID insert_loom
         const insertLoomElement = document.getElementById('insert_loom');
         if (insertLoomElement) {
