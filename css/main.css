@@ -105,3 +105,11 @@ otifications,.faq-item,.faq-item *{user-select:none}@media (max-width:992px){h1{
     background-image: url(../images/AL.webp);
     background-position: top
 }
+
+@media (max-width:992px) {
+    .media__fullwidth .item.image {
+        width: 310px;
+        height: 310px;
+    }
+    
+}
