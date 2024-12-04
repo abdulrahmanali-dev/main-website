@@ -5565,10 +5565,10 @@ pre {
   align-items: center;
   justify-content: space-between;
 }
-.headline__subtitle.space-bottom.loading__item.fs-1.mb-0 {
+.headline__subtitle.space-bottom.fs-1.mb-0 {
   line-height: 35px;
 }
-.headline__title.loading__item {
+.headline__title {
   letter-spacing: -7.9px !important;
 }
 .post-info {
@@ -6063,4 +6063,7 @@ code {
 
 .loader  {
   display: none !important;
+}
+.loading__fade {
+  opacity:1 !important
 }
