@@ -6067,3 +6067,6 @@ code {
 .loading__fade {
   opacity:1 !important
 }
+.hide-mob {
+  display: none;
+}
