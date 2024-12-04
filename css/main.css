@@ -6060,3 +6060,7 @@ code {
     height: 310px;
   }
 }
+
+.loader  {
+  display: none !important;
+}
