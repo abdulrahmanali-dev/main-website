@@ -1356,6 +1356,9 @@ code {
     width: 310px;
     height: 310px;
   }
+  .hide-mob {
+    display: none;
+  }
 }
 
 .loader  {
@@ -1363,7 +1366,4 @@ code {
 }
 .loading__fade {
   opacity:1 !important
-}
-.hide-mob {
-  display: none;
 }
