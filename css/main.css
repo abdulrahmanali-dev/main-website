@@ -1139,11 +1139,6 @@ code {
   .pricing-price {
     font-size: 3.6rem;
   }
-  .pricing-features li {
-    padding: 5px 0;
-    color: var(--t-medium);
-    font-size: 10px;
-  }
   .main__intro {
     height: 105vh;
   }
