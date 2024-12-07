@@ -1368,3 +1368,27 @@ code {
   opacity:1 !important
 }
 
+.media__fullwidth.audits-slider .item {
+  width: 21vw !important;
+  height: 500px !important;
+  max-height:unset !important
+}
+@media (max-width:992px) {
+  .media__fullwidth.audits-slider .item {
+    width: 50vw !important;
+    height: 300px !important;
+    max-height:unset !important
+  }
+  .media__fullwidth.audits-slider.mt-100.mb-100 {
+    margin: 50px 0  !important;
+  }
+}
+.image-audit_1 {
+  background-image: url("../images/audit_1.png");
+}
+.image-audit_2 {
+  background-image: url("../images/audit_2.png");
+}
+.image-audit_3 {
+  background-image: url("../images/audit_3.png");
+}
