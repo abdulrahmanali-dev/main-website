@@ -1366,7 +1366,8 @@ code {
 .media__fullwidth.audits-slider .item {
   width: 21vw !important;
   height: 500px !important;
-  max-height:unset !important
+  max-height:unset !important;
+  border: solid 1px rgba(128, 128, 128, 0.336);
 }
 @media (max-width:992px) {
   .media__fullwidth.audits-slider .item {
@@ -1376,6 +1377,13 @@ code {
   }
   .media__fullwidth.audits-slider.mt-100.mb-100 {
     margin: 50px 0  !important;
+  }
+}
+@media (min-width:992px) and (max-width:1300px){
+  .media__fullwidth.audits-slider .item {
+    width: 23vw !important;
+    height: 500px !important;
+    max-height:unset !important
   }
 }
 .image-audit_1 {
@@ -1389,4 +1397,7 @@ code {
 }
 .image-audit_4 {
   background-image: url("../images/audit_4.webp");
+}
+.image-audit_5 {
+  background-image: url("../images/audit_5.webp");
 }
