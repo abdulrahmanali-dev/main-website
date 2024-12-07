@@ -1365,14 +1365,13 @@ code {
 
 .media__fullwidth.audits-slider .item {
   width: 21vw !important;
-  height: 500px !important;
   max-height:unset !important;
+  height: unset;
   border: solid 1px rgba(128, 128, 128, 0.336);
 }
 @media (max-width:992px) {
   .media__fullwidth.audits-slider .item {
     width: 50vw !important;
-    height: 300px !important;
     max-height:unset !important
   }
   .media__fullwidth.audits-slider.mt-100.mb-100 {
@@ -1382,7 +1381,6 @@ code {
 @media (min-width:992px) and (max-width:1300px){
   .media__fullwidth.audits-slider .item {
     width: 23vw !important;
-    height: 500px !important;
     max-height:unset !important
   }
 }
