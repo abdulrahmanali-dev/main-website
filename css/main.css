@@ -1364,14 +1364,16 @@ code {
 }
 
 .media__fullwidth.audits-slider .item {
-  width: 21vw !important;
+  width: fit-content !important;
   max-height:unset !important;
   height: unset;
   border: solid 1px rgba(128, 128, 128, 0.336);
 }
+.media__fullwidth.audits-slider .item img{
+height: 400px;
+}
 @media (max-width:992px) {
   .media__fullwidth.audits-slider .item {
-    width: 50vw !important;
     max-height:unset !important
   }
   .media__fullwidth.audits-slider.mt-100.mb-100 {
@@ -1380,11 +1382,10 @@ code {
 }
 @media (min-width:992px) and (max-width:1300px){
   .media__fullwidth.audits-slider .item {
-    width: 23vw !important;
     max-height:unset !important
   }
 }
-.image-audit_1 {
+/* .image-audit_1 {
   background-image: url("../images/audit_1.webp");
 }
 .image-audit_2 {
@@ -1399,3 +1400,9 @@ code {
 .image-audit_5 {
   background-image: url("../images/audit_5.webp");
 }
+.image-audit_6 {
+  background-image: url("../images/audit_6.webp");
+}
+.image-audit_7 {
+  background-image: url("../images/audit_7.webp");
+} */
