@@ -460,6 +460,7 @@ ul {
 }
 .pricing-option {
   width: 100%;
+  min-width: 50%;
   background: var(--base-tint);
   border: 1px solid var(--stroke-elements);
   border-radius: var(--_radius);
@@ -1384,4 +1385,8 @@ height: 400px;
   .media__fullwidth.audits-slider .item {
     max-height:unset !important
   }
+}
+
+.image-porfolio {
+  background: url("../images/portfolio_2.webp");
 }
