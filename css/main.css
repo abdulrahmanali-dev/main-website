@@ -1389,4 +1389,11 @@ height: 400px;
 
 .image-porfolio {
   background: url("../images/portfolio_2.webp");
+  background-size: cover !important;
+}
+@media (max-width: 992px) {
+  .main-image-1, .main-image-3, .main-image-4 {
+      height: 247px !important;
+      background-size: cover !important;
+  }
 }
