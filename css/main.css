@@ -1387,6 +1387,12 @@ height: 400px;
   }
 }
 
+.image-cc-full {
+  background: url("../images/cc_full.webp");
+}
+.image-std-full {
+  background: url("../images/std_full.webp");
+}
 .image-porfolio {
   background: url("../images/portfolio_2.webp");
   background-size: cover !important;
