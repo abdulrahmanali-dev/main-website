@@ -1372,6 +1372,7 @@ code {
 }
 .media__fullwidth.audits-slider .item img{
 height: 400px;
+width: 100% !important;
 }
 @media (max-width:992px) {
   .media__fullwidth.audits-slider .item {
