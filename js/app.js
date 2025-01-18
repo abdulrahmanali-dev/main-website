@@ -99,29 +99,28 @@ const content = document.querySelector("body"),
   fadeInItems = document.querySelectorAll(".loading__fade");
  
 
+  // Lazy Loading Script
   document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll("img.lazy");
 
     if ("IntersectionObserver" in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target;
             img.src = img.dataset.src;
-            img.classList.remove("lazy");
+            img.onload = () => img.classList.add("loaded");
             observer.unobserve(img);
           }
         });
       });
 
-      lazyImages.forEach((img) => {
-        imageObserver.observe(img);
-      });
+      lazyImages.forEach(img => observer.observe(img));
     } else {
-      // Fallback for older browsers
-      lazyImages.forEach((img) => {
+      // Fallback for browsers without Intersection Observer support
+      lazyImages.forEach(img => {
         img.src = img.dataset.src;
-        img.classList.remove("lazy");
+        img.onload = () => img.classList.add("loaded");
       });
     }
   });
