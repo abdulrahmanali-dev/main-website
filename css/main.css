@@ -508,6 +508,7 @@ ul {
   fill: var(--t-bright);
   margin-right: 10px;
   vertical-align: middle;
+  display: inline;
 }
 .cta-button {
   display: block;
