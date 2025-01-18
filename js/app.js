@@ -101,7 +101,7 @@ const content = document.querySelector("body"),
 
   // Lazy Loading Script
   document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll("img.lazy");
+    const lazyImages = document.querySelectorAll(".lazy");
 
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver((entries, observer) => {
@@ -123,6 +123,33 @@ const content = document.querySelector("body"),
         img.onload = () => img.classList.add("loaded");
       });
     }
+    const videos = document.querySelectorAll('[data-lazy-video]');
+const videoLoaded = document.querySelector('.info__video-status'); // For loading status
+
+const videosObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const video = entry.target;
+        const sources = Array.from(video.children);
+
+        sources.forEach(source => {
+            if (entry.isIntersecting) {
+                source.src = source.getAttribute('data-lazy-src');
+                video.load();
+                videosObserver.unobserve(video);
+                
+                videoLoaded.firstElementChild.innerHTML = 'true'; // For loading status
+                videoLoaded.classList.add('info__video-status--active'); // For loading status
+            }
+        });
+    });
+}, {
+    root: document, // Only for codepen (necessary when observer is inside the iframe)
+    rootMargin: '200px',
+});
+
+videos.forEach(video => {
+    videosObserver.observe(video);
+});
   });
 
 const scrollSpy = new bootstrap.ScrollSpy(document.body, { target: "#menu", smoothScroll: !0, rootMargin: "0px 0px -40%" }),

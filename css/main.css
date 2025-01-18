@@ -1421,8 +1421,9 @@ width: 100% !important;
 
 .surprise-img {
   position: absolute; height: 100%; opacity: 0.7; width: fit-content !important;
-}    .lazy {
-  display: block;
+} 
+
+.lazy {
   filter: blur(20px); /* Blur effect */
   transition: opacity 0.3s ease, filter 0.3s ease;
 }

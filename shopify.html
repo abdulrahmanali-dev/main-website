@@ -222,9 +222,9 @@
                 <div class="content__block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
-                      <div class="col-12" id="insert_loom">
+                      <div class="col-12">
                         <div style="position: relative; padding-bottom: 56.42633228840126%; height: 0">
-                          <!-- <iframe class="animate-in-up" src="https://www.loom.com/embed/09bf47430dcf44609bc03383ef10cad1?sid=ed281f78-924a-4e15-a347-404c762bf7f7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;border-radius: 16px;"> </iframe> -->
+                          <iframe class="animate-in-up" src="https://www.loom.com/embed/09bf47430dcf44609bc03383ef10cad1?sid=ed281f78-924a-4e15-a347-404c762bf7f7" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;border-radius: 16px;"> </iframe>
                         </div>
                       </div>
                     </div>
@@ -623,7 +623,6 @@
                   <div class="container-fluid p-0">
                     <div class="row g-0">
                       <div class="col-12" id="">
-                        <!-- <video  class='animate-in-up' style='border-radius: 10px;width: 100%;' id="my-video" src="./videos/add requests.mp4"  loop  autoplay>source</video> -->
                         <img class="lazy" class="animate-in-up" style="border-radius: 10px; width: 100%" data-src="./images/client-portal-intro.png" alt="Clinet Portal Image" />
                       </div>
                     </div>
@@ -644,8 +643,11 @@
                 <div class="content__block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
-                      <div class="col-12" id="insert_loom">
-                        <!-- <video  class='animate-in-up' style='border-radius: 10px;width: 100%;' id="" src="./videos/add requests.mp4" loop  autoplay>source</video> -->
+                      <div class="col-12">
+                        <video data-lazy-video preload="none" class='animate-in-up' style='border-radius: 10px;width: 100%;' controls loop  autoplay>
+                          <source data-lazy-src="./videos/add requests.mp4" src="" type="video/webm">
+		                      <source data-lazy-src="./videos/add requests.mp4" src="" type="video/mp4">
+                        </video>
                       </div>
                     </div>
                   </div>
@@ -664,8 +666,10 @@
                 <div class="content__block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
-                      <div class="col-12" id="insert_loom">
-                        <!-- <video  class='animate-in-up' style='border-radius: 10px;width: 100%;' id="" src="./videos/Store Wide CRO.mp4" loop  autoplay>source</video> -->
+                      <div class="col-12">
+                        <video data-lazy-video preload="none" class='animate-in-up' style='border-radius: 10px;width: 100%;' controls loop  autoplay>
+		<source data-lazy-src="./videos/Store Wide CRO.mp4" src="" type="video/mp4">
+                        </video>
                       </div>
                     </div>
                   </div>
@@ -684,8 +688,10 @@
                 <div class="content__block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
-                      <div class="col-12" id="insert_loom">
-                        <!-- <video  class='animate-in-up' style='border-radius: 10px;width: 100%;' id="" src="./videos/expla.mp4" loop  autoplay>source</video> -->
+                      <div class="col-12">
+                        <video data-lazy-video preload="none" class='animate-in-up' style='border-radius: 10px;width: 100%;' controls loop  autoplay>
+		<source data-lazy-src="./videos/expla.mp4" src="" type="video/mp4">
+                        </video>
                       </div>
                     </div>
                   </div>
@@ -704,8 +710,10 @@
                 <div class="content__block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
-                      <div class="col-12" id="insert_loom">
-                        <!-- <video  class='animate-in-up' style='border-radius: 10px;width: 100%;' id="" src="./videos/Comment.mp4" loop  autoplay>source</video> -->
+                      <div class="col-12">
+                        <video data-lazy-video preload="none" class='animate-in-up' style='border-radius: 10px;width: 100%;' controls loop  autoplay>
+                          <source data-lazy-src="./videos/Comment.mp4" src="" type="video/webm">
+                        </video>
                       </div>
                     </div>
                   </div>
@@ -724,8 +732,10 @@
                 <div class="content__block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
-                      <div class="col-12" id="insert_loom">
-                        <!-- <video  class='animate-in-up' style='border-radius: 10px;width: 100%;' id="" src="./videos/info.mp4" loop  autoplay>source</video> -->
+                      <div class="col-12">
+                        <video data-lazy-video preload="none" class='animate-in-up' style='border-radius: 10px;width: 100%;' controls loop  autoplay>
+		<source data-lazy-src="./videos/info.mp4" src="" type="video/mp4">
+                        </video>
                       </div>
                     </div>
                   </div>
@@ -1463,25 +1473,21 @@
       document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           // Add class to the element with ID gif_portal
-          const gifPortalElement = document.getElementById("gif_portal");
-          if (gifPortalElement) {
-            gifPortalElement.classList.add("main-image-4");
-          }
           // Insert the Loom iframe into the element with ID insert_loom
-          // const insertLoomElement = document.getElementById('insert_loom');
-          // if (insertLoomElement) {
-          //     insertLoomElement.innerHTML = `
-          //         <div style="position: relative; padding-bottom: 56.42633228840126%; height: 0;">
-          //             <iframe src="https://www.loom.com/embed/09bf47430dcf44609bc03383ef10cad1?sid=ed281f78-924a-4e15-a347-404c762bf7f7"
-          //                     frameborder="0"
-          //                     webkitallowfullscreen
-          //                     mozallowfullscreen
-          //                     allowfullscreen
-          //                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-          //             </iframe>
-          //         </div>
-          //     `;
-          // }
+          const insertLoomElement = document.getElementById('insert_loom');
+          if (insertLoomElement) {
+              insertLoomElement.innerHTML = `
+                  <div style="position: relative; padding-bottom: 56.42633228840126%; height: 0;">
+                      <iframe src="https://www.loom.com/embed/09bf47430dcf44609bc03383ef10cad1?sid=ed281f78-924a-4e15-a347-404c762bf7f7"
+                              frameborder="0"
+                              webkitallowfullscreen
+                              mozallowfullscreen
+                              allowfullscreen
+                              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                      </iframe>
+                  </div>
+              `;
+          }
         }, 1000); // 5000ms = 5 seconds
       });
     </script>
