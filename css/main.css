@@ -1596,3 +1596,104 @@ p.type-basic-160lh {
       width: 800px;
   }
 }
+
+
+.main-image-1 {
+  border-radius: 20px;
+  width: 100%;
+  height: 527px;
+  object-fit: cover;
+  object-position: bottom;
+}
+/* optimize for macbocks */
+@media (max-width:1300px) and (min-width:1200px) {
+  #blogs .blog-body p {
+    font-size: 24px !important;
+  }
+  .achievements__number, .footer__text, .item__text, h2 {
+    font-size: 7.5rem;
+}      blockquote {
+  font-size: 4.4rem;
+}
+.btn-default, .btn-line, .btn-line-circle-icon, .mxd-swiper-pagination-fraction, .section-name, .tagline-chapter, .tagline-tool, a, h6, p {
+  font-size: 1.95rem;
+}
+.main-image-1 {
+  height: 457px;
+}
+.parentcomparative > div > h3 {
+  font-size: 20.2px;
+}
+}
+
+
+/* optimize for 1080p */
+
+@media (max-width:1550px) and (min-width:1400px) {
+  #blogs .blog-body p {
+    font-size: 29px !important;
+  }
+  .achievements__number, .footer__text, .item__text, h2 {
+    font-size: 7.5rem;
+}      blockquote {
+  font-size: 5.4rem;
+}
+.btn-default, .btn-line, .btn-line-circle-icon, .mxd-swiper-pagination-fraction, .section-name, .tagline-chapter, .tagline-tool, a, h6, p {
+  font-size: 2.35rem;
+}
+.main-image-1 {
+  height: 559px;
+}
+.parentcomparative > div > h3 {
+  font-size: 20.2px;
+}
+.large-text-block.mt-1 h3, h3.fw-bold {
+  margin: 10px 0 0 !important;
+  font-size: 46px !important;
+}
+.pricing-features li {
+  font-size: 20px;
+}
+.footercta__caption p {
+  max-width: 55rem;
+}
+#blogs .blogs_post-info {
+  font-size: 18px !important;
+}
+.headline {
+  top: 129px;
+}
+}
+
+@media (max-width:1750px) and (min-width:1550px) {
+  #blogs .blog-body p {
+    font-size: 29px !important;
+  }
+  .achievements__number, .footer__text, .item__text, h2 {
+    font-size: 8.5rem;
+}      blockquote {
+  font-size: 5rem;
+}
+.btn-default, .btn-line, .btn-line-circle-icon, .mxd-swiper-pagination-fraction, .section-name, .tagline-chapter, .tagline-tool, a, h6, p {
+  font-size: 2.35rem;
+}
+.main-image-1 {
+  height: 659px;
+}
+.parentcomparative > div > h3 {
+  font-size: 20.2px;
+}
+.large-text-block.mt-1 h3, h3.fw-bold {
+  margin: 10px 0 0 !important;
+  font-size: 52px !important;
+}
+.pricing-features li {
+  font-size: 20px;
+}
+.footercta__caption p {
+  max-width: 55rem;
+}
+#blogs .blogs_post-info {
+  font-size: 18px !important;
+}
+}
