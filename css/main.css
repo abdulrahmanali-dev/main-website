@@ -1744,7 +1744,7 @@ p.type-basic-160lh {
 @media (max-width:992px) {
   .cool-img {
     border-radius: 10px;
-    min-height: 185px;
+    min-height: unset;
     width: 100%;
   }
   .main-image-3 {

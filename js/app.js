@@ -1,3 +1,31 @@
+// Function to set the height of multiple images as a percentage of their width
+function adjustMultipleImagesHeight(className, percentage) {
+    // Select all images with the specified class
+    const images = document.querySelectorAll(`.${className}`);
+
+    if (images.length > 0) {
+        images.forEach((image) => {
+            // Wait for the image to load to ensure width is available
+            image.onload = () => {
+                const width = image.clientWidth; // Get the width of the image
+                const newHeight = width * (percentage / 100); // Calculate the new height
+                image.style.height = `${newHeight}px`; // Set the height of the image
+            };
+
+            // If the image is already loaded, adjust the height immediately
+            if (image.complete) {
+                const width = image.clientWidth; // Get the width of the image
+                const newHeight = width * (percentage / 100); // Calculate the new height
+                image.style.height = `${newHeight}px`; // Set the height of the image
+            }
+        });
+    } else {
+        console.error(`No images found with the class: ${className}`);
+    }
+}
+
+// Usage example
+adjustMultipleImagesHeight('cool-img', 56.15); // Replace 'cool-img' with your target class name
 document.addEventListener("DOMContentLoaded", function () {
   const e = document.getElementById("modal"),
     t = document.getElementById("overlay"),
