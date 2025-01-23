@@ -771,6 +771,7 @@ section#pricing {
 }
 .logo-slider__container {
   display: flex;
+  min-height: 83px;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
