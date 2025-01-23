@@ -1,4 +1,13 @@
-.services-stack__image {
+.stack-offset {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex
+;
+  width: 100%;
+  height: 8rem;
+  background-color: var(--base);
+}.services-stack__image {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
