@@ -1413,10 +1413,6 @@ width: 100% !important;
 .image-std-full {
   background: url("../images/std_full.webp");
 }
-.image-porfolio {
-  background: url("../images/portfolio_2.webp");
-  background-size: cover !important;
-}
 .pricing-alert {
   background-color: rgba(255, 149, 149, 0.274);
   width: fit-content;
@@ -1721,5 +1717,6 @@ p.type-basic-160lh {
 
 .cool-img {
   border-radius: 10px;
+  min-height: 450px;
   width: 100%;
 }
