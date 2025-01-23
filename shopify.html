@@ -46,6 +46,7 @@
         "url": "https://abdowebdesign.com/shopify.html"
       }
     </script>
+
   </head>
   <body>
     <!-- Google tag (gtag.js) -->
@@ -367,7 +368,7 @@
                     <div class="container-fluid p-0">
                       <div class="row g-0">
                         <div class="col-12">
-                        <img  class="lazy animate-in-up main-image-1" data-src="./images/me-2.webp" alt="Clinet Portal Image" />
+                        <img  class="lazy animate-in-up main-image-1 " data-src="./images/me-2.webp" alt="Clinet Portal Image" />
                         </div>
                       </div>
                     </div>
@@ -1716,6 +1717,57 @@
     <a href="https://api.whatsapp.com/send?phone=939892936" target="_blank" class="btn btn-to-top slide-up news-btn" style="right: 10rem">
       <div>Iam Free! <i class="fa fa-usd"></i></div>
     </a>
+    <script>
+      // Function to calculate the height as a percentage of width and apply it via a class rule
+function addHeightToClass(className, percentage) {
+    // Find the first image with the class to calculate its width (assuming they all follow similar behavior)
+    const sampleImage = document.querySelector(`.${className}`);
+
+    if (sampleImage) {
+        // Wait for the sample image to load to ensure width is available
+        sampleImage.onload = () => {
+            const width = sampleImage.clientWidth; // Get the width of the sample image
+            const calculatedHeight = width * (percentage / 100); // Calculate the height based on the percentage
+
+            // Create a new style element
+            const styleElement = document.createElement('style');
+            styleElement.type = 'text/css';
+            styleElement.innerHTML = `
+                .${className} {
+                    height: ${calculatedHeight}px !important;
+                }
+            `;
+
+            // Append the style element to the head of the document
+            document.head.appendChild(styleElement);
+        };
+
+        // If the image is already loaded, apply the height immediately
+        if (sampleImage.complete) {
+            const width = sampleImage.clientWidth; // Get the width of the sample image
+            const calculatedHeight = width * (percentage / 100); // Calculate the height based on the percentage
+
+            // Create a new style element
+            const styleElement = document.createElement('style');
+            styleElement.type = 'text/css';
+            styleElement.innerHTML = `
+                .${className} {
+                    height: ${calculatedHeight}px !important;
+                }
+            `;
+
+            // Append the style element to the head of the document
+            document.head.appendChild(styleElement);
+        }
+    } else {
+        console.error(`No element found with the class: ${className}`);
+    }
+}
+
+// Usage example
+addHeightToClass('cool-img', 56.15); // Replace 'cool-img' with your target class name
+
+    </script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
 
