@@ -244,11 +244,11 @@ strong {
 }
 .prob-list .d-flex p {
   max-width: 260px;
-  margin: auto;
+  margin: 0 auto ;
 }
 .prob-list .d-flex img {
   height: 100px;
-  width: fit-content;
+  width: 100px;
 }
 #prob blockquote,
 #prob h3 {
