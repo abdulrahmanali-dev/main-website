@@ -1718,4 +1718,8 @@ p.type-basic-160lh {
   font-size: 18px !important;
 }
 }
- 
+
+.cool-img {
+  border-radius: 10px;
+  width: 100%;
+}
