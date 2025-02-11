@@ -99,58 +99,69 @@ const content = document.querySelector("body"),
   fadeInItems = document.querySelectorAll(".loading__fade");
  
 
-  // Lazy Loading Script
   document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll(".lazy");
+    const gifImages = Array.from(lazyImages).filter(img => img.dataset.src.endsWith('.gif'));
+    const nonGifImages = Array.from(lazyImages).filter(img => !img.dataset.src.endsWith('.gif'));
 
     if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.onload = () => img.classList.add("loaded");
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        nonGifImages.forEach(img => observer.observe(img));
+    } else {
+        // Fallback for browsers without Intersection Observer support
+        nonGifImages.forEach(img => {
             img.src = img.dataset.src;
             img.onload = () => img.classList.add("loaded");
-            observer.unobserve(img);
-          }
         });
-      });
-
-      lazyImages.forEach(img => observer.observe(img));
-    } else {
-      // Fallback for browsers without Intersection Observer support
-      lazyImages.forEach(img => {
-        img.src = img.dataset.src;
-        img.onload = () => img.classList.add("loaded");
-      });
     }
-    const videos = document.querySelectorAll('[data-lazy-video]');
-const videoLoaded = document.querySelector('.info__video-status'); // For loading status
 
-const videosObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        const video = entry.target;
-        const sources = Array.from(video.children);
-
-        sources.forEach(source => {
-            if (entry.isIntersecting) {
-                source.src = source.getAttribute('data-lazy-src');
-                video.load();
-                videosObserver.unobserve(video);
-                
-                videoLoaded.firstElementChild.innerHTML = 'true'; // For loading status
-                videoLoaded.classList.add('info__video-status--active'); // For loading status
-            }
+    // Load GIF images after 20 seconds
+    setTimeout(() => {
+        gifImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.onload = () => img.classList.add("loaded");
         });
+    }, 3000);
+
+    // Lazy loading for videos
+    const videos = document.querySelectorAll('[data-lazy-video]');
+    const videoLoaded = document.querySelector('.info__video-status'); // For loading status
+
+    const videosObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            const sources = Array.from(video.children);
+
+            sources.forEach(source => {
+                if (entry.isIntersecting) {
+                    source.src = source.getAttribute('data-lazy-src');
+                    video.load();
+                    videosObserver.unobserve(video);
+
+                    videoLoaded.firstElementChild.innerHTML = 'true'; // For loading status
+                    videoLoaded.classList.add('info__video-status--active'); // For loading status
+                }
+            });
+        });
+    }, {
+        rootMargin: '200px',
     });
-}, {
-    root: document, // Only for codepen (necessary when observer is inside the iframe)
-    rootMargin: '200px',
+
+    videos.forEach(video => {
+        videosObserver.observe(video);
+    });
 });
 
-videos.forEach(video => {
-    videosObserver.observe(video);
-});
-  });
 
 const scrollSpy = new bootstrap.ScrollSpy(document.body, { target: "#menu", smoothScroll: !0, rootMargin: "0px 0px -40%" }),
   lenis = new Lenis();
