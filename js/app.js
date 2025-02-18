@@ -131,7 +131,7 @@ const content = document.querySelector("body"),
             img.src = img.dataset.src;
             img.onload = () => img.classList.add("loaded");
         });
-    }, 3000);
+    }, 4000);
 
     // Lazy loading for videos
     const videos = document.querySelectorAll('[data-lazy-video]');
