@@ -99,40 +99,31 @@ const content = document.querySelector("body"),
   fadeInItems = document.querySelectorAll(".loading__fade");
  
 
+
+  // Lazy Loading Script
   document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll(".lazy");
-    const gifImages = Array.from(lazyImages).filter(img => img.dataset.src.endsWith('.gif'));
-    const nonGifImages = Array.from(lazyImages).filter(img => !img.dataset.src.endsWith('.gif'));
 
     if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.onload = () => img.classList.add("loaded");
-                    observer.unobserve(img);
-                }
-            });
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.onload = () => img.classList.add("loaded");
+            observer.unobserve(img);
+          }
         });
+      });
 
-        nonGifImages.forEach(img => observer.observe(img));
+      lazyImages.forEach(img => observer.observe(img));
     } else {
-        // Fallback for browsers without Intersection Observer support
-        nonGifImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.onload = () => img.classList.add("loaded");
-        });
+      // Fallback for browsers without Intersection Observer support
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        img.onload = () => img.classList.add("loaded");
+      });
     }
-
-    // Load GIF images after 20 seconds
-    setTimeout(() => {
-        gifImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.onload = () => img.classList.add("loaded");
-        });
-    }, 4000);
-
     // Lazy loading for videos
     const videos = document.querySelectorAll('[data-lazy-video]');
     const videoLoaded = document.querySelector('.info__video-status'); // For loading status
