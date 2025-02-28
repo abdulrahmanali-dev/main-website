@@ -1751,12 +1751,3 @@ p.type-basic-160lh {
   .main-image-3 {
   }
 }
-#portal 
-.content__block 
-.container-fluid.p-0 
-.row.g-0 
-.col-12 .lazy.cool-img {
-  filter: blur(20px); /* Blur effect */
-  transition: opacity 0.3s ease, filter 0.3s ease;
-
-}
