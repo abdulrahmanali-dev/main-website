@@ -1062,8 +1062,7 @@ code {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
   }
-  #faq,
-  .media__fullwidth {
+  #faq {
     padding-top: 0;
   }
   h1 {
@@ -1405,6 +1404,7 @@ code {
   .media__fullwidth .item.image {
     width: 310px;
     height: 310px;
+    max-height: unset !important;
   }
   .hide-mob {
     display: none;
