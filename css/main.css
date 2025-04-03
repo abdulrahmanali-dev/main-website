@@ -1880,3 +1880,23 @@ img{
   display: flex;
   gap: 12px;
 }
+
+.cta-button.btn-caption {
+  width: fit-content;
+  position: relative;
+  left: unset;
+  top: unset;
+  bottom: unset;
+  border-color: white;
+}
+.cta-button.btn-caption span{
+  transition: var(--_animspeed-medium);
+
+}
+.cta-button.btn-caption:hover {
+  opacity: unset;
+  background-color: transparent;
+  color: white;
+
+
+ }
