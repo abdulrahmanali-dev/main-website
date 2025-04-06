@@ -1900,3 +1900,17 @@ img{
 
 
  }
+
+
+ @media(max-width:992px) {
+
+   .services-stack__image {
+    padding-left: 0;
+
+   }
+   .services-stack__title {
+margin-bottom: 0;
+   }
+  }
+
+ 
