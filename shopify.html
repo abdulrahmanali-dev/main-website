@@ -214,11 +214,11 @@
                     </div>
                   </div>
                   <div class="headline__btn m-0 mt-2">
-                    <a class="btn cta-button btn-caption btn-line-small icon-right slide-right-down" href="https://cal.com/abdowebdesign/30min">
+                    <a class="btn cta-button btn-caption banner-button btn-line-small icon-right slide-right-down" href="https://cal.com/abdowebdesign/30min">
                       <span class="btn-captiosn">Book a call</span>
                       <i class="ph ph-arrow-up-right ps-3"></i>
                     </a>
-                    <a class="btn btn-caption btn-line-small icon-right slide-right-down" href="#pricing" >
+                    <a class="btn btn-caption banner-button btn-line-small icon-right slide-right-down" href="#pricing" >
                       <span class="btn-captiosn">Pricing</span>
                       <i class="ph ph-arrow-up-right ps-3"></i>
                     </a>
@@ -236,23 +236,7 @@
             <div class="row g-0">
               <div class="col-12 col-xl-2"></div>
               <div class="col-12 col-xl-8" id="video">
-                <div class="content__block">
-                  <div class="container-fluid p-0">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div style="position: relative; padding-bottom: 56.42633228840126%; height: 0;">
-                          <!-- <iframe src="https://www.loom.com/embed/09bf47430dcf44609bc03383ef10cad1?sid=ed281f78-924a-4e15-a347-404c762bf7f7"
-                                  frameborder="0"
-                                  webkitallowfullscreen
-                                  mozallowfullscreen
-                                  allowfullscreen
-                                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                          </iframe> -->
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+ 
                 <div class="content__block large-text-block">
                   <div class="container-fluid p-0">
                     <div class="row g-0">
@@ -456,7 +440,7 @@
         </div>
       </section>
    
-       <section id="testimonialsy" class="inner inner-grid-bottom about">
+       <section id="about" class="inner inner-grid-bottom about">
         <div class="inner__wrapper">
           <div class="container-fluid p-0">
             <div class="row g-0">
@@ -479,10 +463,14 @@
                     </div> -->
                     <div class="block__descr">
                       <h2 class="reveal-type animate-in-up">
-                       Why us?
+                       <!-- Why us? -->
+                        Who are we.. exactly?
                       </h2>
-                      <p class="h2__text type-basic-160lh animate-in-up">
-                       We have spent over <i class="italic"> 6 months</i> nailing our service down - before even launching, because we understood that <strong> it takes more then a good looking landing page to get results for our customers.</strong>
+                      <p class="h2__text aboutus-p type-basic-160lh animate-in-up reveal-type">
+                       <!-- We have spent over <i class="italic"> 6 months</i> nailing our service down - before even launching, because we understood that <strong> it takes more then a good looking landing page to get results for our customers.</strong> -->
+                      <!-- InfiniteCRO - A Web Design and CRO Agency dedicated to take you to annormouse hights -->
+                      InfiniteCRO - A Web Design and CRO Agency dedicated to help <i class="fw-bold" style="font-style: italic; color: rgb(84 245 63)"> Shopify </i> brands scale and <strong>scale profetebly</strong>
+                       
                       </p>
                      </div>
                   </div>
@@ -490,6 +478,64 @@
                     <div class="container-fluid p-0">
                       <div class="row g-0">
                         <div class="media__fullwidth testimonials-slider">
+                          <div class="modal" id="MiguelModal">
+                            <div class="modal-content">
+                              <span class="close-MiguelModal">&times;</span>
+                              <video preload="none" class='animate-in-ups' style='border-radius: 10px;width: 100%;' controls loop autoplay>
+                                <!-- Video sources will be inserted here dynamically -->
+                              </video>
+                            </div>
+                          </div>
+                          
+                          <script>
+                          document.addEventListener('DOMContentLoaded', function() {
+                            const MiguelModal = document.getElementById('MiguelModal');
+                            const Miguelbtn = document.querySelectorAll('.play_testimony');
+                            const MiguelcloseBtn = document.querySelector('.close-MiguelModal');
+                            const Miguelvideo = document.querySelector('#MiguelModal video');
+                            console.log(MiguelModal);
+                            Miguelbtn.forEach(element => {
+                              console.log(element);
+                        
+                            // Open MiguelModal when button is clicked
+                            element.addEventListener('click', function() {
+                              // Only add sources if they haven't been added yet
+                              if (Miguelvideo.children.length === 0) {
+                                const MiguelsourceWebm = document.createElement('source');
+                                MiguelsourceWebm.src = '/videos/miguel-testimony.webm';
+                                MiguelsourceWebm.type = 'video/webm';
+                                
+                                const MiguelsourceMp4 = document.createElement('source');
+                                MiguelsourceMp4.src = '/videos/sops.mp4';
+                                MiguelsourceMp4.type = 'video/mp4';
+                                
+                                Miguelvideo.appendChild(MiguelsourceWebm);
+                                Miguelvideo.appendChild(MiguelsourceMp4);
+                                
+                                // Load the Miguelvideo (required for some browsers)
+                                Miguelvideo.load();
+                              }
+                              
+                              MiguelModal.classList.add('active');
+                            });
+                          });
+                            // Close MiguelModal when X is clicked
+                            MiguelcloseBtn.addEventListener('click', function() {
+                              MiguelModal.classList.remove('active');
+                              // Pause the video when closing
+                              Miguelvideo.pause();
+                            });
+                            
+                            // Close MiguelModal when clicking outside the video
+                            MiguelModal.addEventListener('click', function(e) {
+                              if (e.target === MiguelModal) {
+                                MiguelModal.classList.remove('active');
+                                // Pause the video when closing
+                                Miguelvideo.pause();
+                              }
+                            });
+                          });
+                          </script>
                           <div class="items items--gsap">
                             <div class="items__container">
                               <div class="item testimonial">
@@ -502,7 +548,7 @@
                                     <img src="../images/star.svg" alt="star" >
                                   </div>
                                 </div>
-                                <p class="review-text">Your top of the list when I start making enough to hire someone. If you hadn't taken the time to help me out I'd probably still be stuck, but your advice is really what made me realise Dawn isn't good enough on its own.</p>
+                                <p class="review-text">If you hadn't taken the time to help me out I'd probably still be stuck, but your advice is really what made me realise Dawn isn't good enough on its own.</p>
                                 <h4>Sean Smy</h4>
                                 <p class="position">CEO - Visualise Health</p>
                               </div>
@@ -512,6 +558,13 @@
                               <div class="item testimonial">
                                 <img class="lazy" data-src="images/miguel-testim.webp" alt="" >
                               </div>
+                              <div class="item testimonial play_testimony" data-modal="MiguelModal" data-video-mp4="videos/miguel-testimony.mp4">
+                                <img class="lazy" data-src="images/miguel_testimony.png" alt="">
+                                <span class="play-icon">
+                                  <img class="lazy" data-src="images/play-button-svgrepo-com.svg" alt="">
+                                </span>
+                              </div>
+                              <!--  -->
                               <div class="item testimonial">
                                 <div class="star-reviews">
                                   <div class="reviews-container">
@@ -539,6 +592,14 @@
                         </div>
                       </div>
                     </div>
+                    <div class="block__descr">
+                  
+                      <p class="h2__text aboutus-p type-basic-160lh animate-in-up reveal-type">
+                       We have spent over <i class="italic"> 6 months</i> nailing our processes down - before even launching.
+                      <!-- InfiniteCRO - A Web Design and CRO Agency dedicated to help <i class="fw-bold" style="font-style: italic; color: rgb(84 245 63)"> Shopify </i> brands scale and <strong>scale profetebly</strong> -->
+
+                      </p>
+                     </div>
                   </div>
 
                 </div>
@@ -548,7 +609,9 @@
           </div>
         </div>
       </section>
-      <section id="about" class="inner inner-grid-bottom about " style="padding-top: 0 !important;">
+
+    
+      <section  class="inner inner-grid-bottom about " style="padding-top: 0 !important;">
         <div class="inner__wrapper">
           <div class="container-fluid p-0">
             <div class="row g-0">
@@ -608,7 +671,7 @@
                         </div>
                       </div>
                     </div> -->
-                    <div class="sectiongridcomparative">
+                    <div class="sectiongridcomparative animate-in-up ">
                       <!-- <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 20px">
                         <h3 class="titre-section" style="text-align: center; width: fit-content; margin: 0px; color: white">Why Work With Us</h3>
                       </div> -->
@@ -708,6 +771,14 @@
                       </div>
                     </div>
                     <div class="content__block">
+                      <div class="block__descr">
+                        <p class="h2__text aboutus-p type-basic-160lh reveal-type">
+                          Because we understood that it takes <i class="italic"> more </i> then just designing nice looking landing pages to be <strong> EXCEPTIONAL.</strong>  
+                        </p>
+                       </div>
+                    </div>
+                    
+                    <div class="content__block ">
                       <div class="stack-wrapper">
                        <div class="stack-offset"></div>
                        <div class="services-stack">
@@ -824,8 +895,65 @@
           </div>
       </section>
 
-
-
+      <section id="about" class="inner inner-grid-bottom about pt-0">
+        <div class="inner__wrapper">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+              <!-- Inner Section Name Start -->
+              <div class="col-12 col-xl-2">
+           
+              </div>
+              <!-- Inner Section Name End -->
+      
+              <!-- Inner Section Content Start -->
+              <div class="col-12 col-xl-8">
+                <div class="inner__content">
+                  <!-- Content Block - H2 Section Title Start -->
+            
+                  <!-- Content Block - H2 Section Title End -->
+      
+                  <!-- Content Block - About Me Data Start -->
+                  <div class="content__block grid-block pre-offcanvas-grid-block">
+                    <div class="container-fluid p-0">
+                      <div class="row g-0 justify-content-between">
+                        <div class="col-12 col-md-4 grid-item about-info pre-title" style="border-radius: 10px">
+                          <div class=" animate-in-up" style="border-radius: 10px; width: 100%">
+                            <img src="./images/memem.png" alt="Image" style="border-radius: 10px" />
+                          </div>
+                        </div>
+      
+                        <div class="col-12 col-md-8 grid-item about-descr pre-title animate-in-up">
+                          <!-- <p class="about-descr__text type-basic-160lh" >Every pixel in your store. Every click, every scroll, every second counts.</p> -->
+                          <!-- <p class="about-descr__text type-basic-160lh" >Every pixel in your store is either helpful or harmful. use it wisely</p> -->
+                          <!-- <p class="about-descr__text type-basic-160lh" >We design with purpose. Each pixel is either helpful or harmful. </p> -->
+                          <p class="about-descr__text type-basic-160lh" >We design with purpose. Every click, every scroll, every second counts.</p>
+                                                    <!-- <p class="about-descr__text type-basic-160lh" >We design with purpose. Every pixel in your store is either helpful or harmful. use it wisely</p> -->
+                                                    <!-- <p class="about-descr__text type-basic-160lh" >We design with purpose. Every pixel in your store is either helpful or harmful. </p> -->
+                          <div class="testimony-person">
+                            Abdulrahman Ali
+                            <div class="testimony-position" >
+                              CEO & Founder - infiniteCRO LLC
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Content Block - About Me Data End -->
+                </div>
+              </div>
+              <!-- Inner Section Content End -->
+      
+              <!-- Inner Section Aside Start -->
+              <div class="col-12 col-xl-2"></div>
+              <!-- Inner Section Aside End -->
+            </div>
+          </div>
+      
+ 
+        </div>
+      </section>
+      
       <section id="portal" class="inner inner-grid-bottom about">
         <div class="grad"></div>
         <div class="inner__wrapper">
@@ -1124,41 +1252,63 @@
                       </ul>
                       <a href="https://cal.com/abdowebdesign/30min" class="cta-button">Book a call with Abdo</a>
                       <p class="risk-reversal"><img src="./images/shield-tick-svgrepo-com.svg" class="check-icon" alt="" > If you don't like, you don't pay</p>
-                    </div>  <div class="modal" id="videoModal">
+                    </div>  
+                    <div class="modal" id="videoModal">
                       <div class="modal-content">
-                          <span class="close-modal">&times;</span>
-                          <video  preload="none" class='animate-in-up' style='border-radius: 10px;width: 100%;' controls loop  >
-                          <source src="/0410(1).mp4" type="video/webm">
-		                      <source src="/0410(1).mp4" type="video/mp4">
+                        <span class="close-modal">&times;</span>
+                        <video preload="none" class='animate-in-ups' style='border-radius: 10px;width: 100%;' controls loop autoplay>
+                          <!-- Video sources will be inserted here dynamically -->
                         </video>
-                          <!-- <video controls autoplay>
-                              <source src="file:///C:/Users/Abdo/AppData/Local/CapCut/Videos/0410(1).mp4" type="video/mp4">
-                              Your browser does not support the video tag.
-                          </video> -->
                       </div>
-                  </div>
-<script>  document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('videoModal');
-  const btn = document.getElementById('x');
-  const closeBtn = document.querySelector('.close-modal');
-  
-  // Open modal when button is clicked
-  btn.addEventListener('click', function() {
-      modal.classList.add('active');
-  });
-  
-  // Close modal when X is clicked
-  closeBtn.addEventListener('click', function() {
-      modal.classList.remove('active');
-  });
-  
-  // Close modal when clicking outside the video
-  modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-          modal.classList.remove('active');
-      }
-  });
-});
+                    </div>
+                    
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      const modal = document.getElementById('videoModal');
+                      const btn = document.getElementById('x');
+                      const closeBtn = document.querySelector('.close-modal');
+                      const video = document.querySelector('#videoModal video');
+                      
+                      // Open modal when button is clicked
+                      btn.addEventListener('click', function() {
+                        // Only add sources if they haven't been added yet
+                        if (video.children.length === 0) {
+                          const sourceWebm = document.createElement('source');
+                          sourceWebm.src = '/0410(1).mp4';
+                          sourceWebm.type = 'video/webm';
+                          
+                          const sourceMp4 = document.createElement('source');
+                          sourceMp4.src = '/0410(1).mp4';
+                          sourceMp4.type = 'video/mp4';
+                          
+                          video.appendChild(sourceWebm);
+                          video.appendChild(sourceMp4);
+                          
+                          // Load the video (required for some browsers)
+                          video.load();
+                        }
+                        
+                        modal.classList.add('active');
+                      });
+                      
+                      // Close modal when X is clicked
+                      closeBtn.addEventListener('click', function() {
+                        modal.classList.remove('active');
+                        // Pause the video when closing
+                        video.pause();
+                      });
+                      
+                      // Close modal when clicking outside the video
+                      modal.addEventListener('click', function(e) {
+                        if (e.target === modal) {
+                          modal.classList.remove('active');
+                          // Pause the video when closing
+                          video.pause();
+                        }
+                      });
+                    });
+                    </script>
+<script>
                     //   <div class="pricing-option">
                     //   <h3 class="pricing-title">Store Redesign⚡</h3>
                     //   <p class="pricing-discount">Effective, Data-Driven</p>
@@ -1366,7 +1516,7 @@
                                   <textarea name="Message" placeholder="Any Resources, Files, or Links you would like to share?"></textarea>
                                 </div>
                                 <div class="col-12 form__item">
-                                  <label class="checkbox-label d-inline"> By submitting you agree to receive Abdo's value-packed newsletter. No advertisements, no BS. This will become the only newsletter that you will wait for. </label>
+                                  <label class="checkbox-label d-inline"> By submitting you agree to receive Abdo's value-packed newsletter.</label>
                                 </div>
                                 <div class="col-12 form__item">
                                   <button style="width: 100%; left: 0" class="cta-button" type="submit">Submit Request</button>
@@ -1443,7 +1593,7 @@
                                   <textarea name="Message" placeholder="Any Resources, Files, or Links you would like to share?"></textarea>
                                 </div>
                                 <div class="col-12 form__item">
-                                  <label class="checkbox-label d-inline"> By submitting you agree to receive Abdo's value-packed newsletter. No advertisements, no BS. This will become the only newsletter that you will wait for. </label>
+                                  <label class="checkbox-label d-inline"> By submitting you agree to receive Abdo's value-packed newsletter.</label>
                                 </div>
                                 <div class="col-12 form__item">
                                   <button style="width: 100%; left: 0" class="cta-button" type="submit">Submit Request</button>
@@ -1499,92 +1649,6 @@
                   </div>
                 </div>
               </div> -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="faq" class="inner faq inner-grid-bottom no-padding-bottom">
-        <div class="inner__wrapper">
-          <div class="container-fluid p-0">
-            <div class="row g-0">
-              <div class="col-12 col-xl-2">
-                <div class="inner__name">
-                  <div class="content__block name-block">
-                    <span class="section-name icon-right animate-in-up">
-                      <span class="section-name-caption">FAQ</span>
-                      <i class="ph ph-arrow-down-right"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-8">
-                <div class="inner__content">
-                  <div class="content__block section-title">
-                    <div class="block__descr">
-                      <h2 class="reveal-type animate-in-up">Frequently Asked Questions</h2>
-                      <p class="h2__text text-twothirds type-basic-160lh animate-in-up">Here are some common questions i usually get asked. If you have further questions, don't hesitate to reach out at <a class="fw-bold" href="mailto:abdo@abdowebdesign.com">abdo@abdowebdesign.com</a></p>
-                    </div>
-                  </div>
-                  <!-- Content Block - FAQ Start -->
-                  <div class="content__block grid-block pre-grid-items">
-                    <div class="faq-container">
-                      <div class="faq-item">
-                        <h3 class="faq-question" onclick="toggleFAQ(this)">
-                          How are you so fast and so good at the same time?
-                          <span class="faqicon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g stroke-width="0"></g>
-                              <g stroke-linecap="round" stroke-linejoin="round"></g>
-                              <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
-                            </svg>
-                          </span>
-                        </h3>
-                        <p class="faq-answer">the tight deadlines when working for companies and agencies forced me to deliver high-quality work at a fast speed. I did lose some hair as a cost of that 😄, but it taught me how to deliver high-quality service on time.</p>
-                      </div>
-                      <div class="faq-item">
-                        <h3 class="faq-question" onclick="toggleFAQ(this)">
-                          How could you be so young and so good at the same time?
-                          <span class="faqicon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g stroke-width="0"></g>
-                              <g stroke-linecap="round" stroke-linejoin="round"></g>
-                              <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
-                            </svg>
-                          </span>
-                        </h3>
-                        <p class="faq-answer">Simple: I started early, learned a lot, and received mentorship. I was hard-working and paid attention to the details.</p>
-                      </div>
-                      <div class="faq-item">
-                        <h3 class="faq-question" onclick="toggleFAQ(this)">
-                          Why not hire a reputable agency?
-                          <span class="faqicon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g stroke-width="0"></g>
-                              <g stroke-linecap="round" stroke-linejoin="round"></g>
-                              <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
-                            </svg>
-                          </span>
-                        </h3>
-                        <p class="faq-answer">Hiring a reputable agency is a great option, but I’ve worked for many agencies and found that projects can often get dragged out, as their focus is split across many projects.</p>
-                      </div>
-                      <!-- <div class="faq-item open">
-                        <h3 class="faq-question" onclick="toggleFAQ(this)">
-                          How long does the process take?
-                          <span class="faqicon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <g stroke-width="0"></g>
-                              <g stroke-linecap="round" stroke-linejoin="round"></g>
-                              <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
-                            </svg>
-                          </span>
-                        </h3>
-                        <p class="faq-answer">A fully optimized Store can take between 1 to 2 weeks for copy design and development. You will be updated daily with the progress of the project and the estimated remaining time.</p>
-                      </div> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-xl-2"></div>
             </div>
           </div>
         </div>
@@ -1755,6 +1819,7 @@
                         </div>
                       </div>
                       <div class="item item-regular text">
+                        <!-- <p class="item__text">Secure Your Spot</p> -->
                         <p class="item__text">Book A Call</p>
                         <div class="item__image">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
@@ -1817,7 +1882,12 @@
                     <div class="col-12">
                       <!-- <div class="footer__footercta d-flex flex-column">
                         <div class="footercta__caption d-flex justify-content-center text-center animate-in-up">
-                          <p class="type-basic-160lh">Worst case sinario you get your money back + all my SOPs for free + A consultation call with top g Abdo <br> can't be more worth it then that bro 💀 </p>
+                          <p class="type-basic-160lh" id="booking-text">Booking for <span id="month-placeholder"></span> — spots are almost gone!</p>
+                          <script>
+                            const now = new Date();
+                            const monthName = now.toLocaleString('default', { month: 'long' });
+                            document.getElementById("month-placeholder").textContent =  monthName;
+                          </script>
                         </div>
                         <div class="footercta__cta d-flex justify-content-center animate-in-up">
                           <a class="btn btn-default hover-default" href="https://cal.com/abdowebdesign/30min" target="_blank">

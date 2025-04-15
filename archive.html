@@ -1,478 +1,911 @@
 <style>
-    /* Main Styles */
-    .horizontal-scroll-section {
-      position: relative;
-      min-height: 100vh;
-      width: 100%;
-      overflow: hidden;
-    }
-  
-    /* Slide container */
-    .horizontal-scroll-section .slide-container {
-      width: 500%;
-      height: 74vh;
-      display: flex;
-      flex-wrap: nowrap;
-      overscroll-behavior: none;
-    }
-    /* Individual slides */
-    .horizontal-scroll-section .slide {
-      border: solid 1px white;
-      border-radius: 20px;
-      margin-right: 20px;
-      width: 20%;
-      height: 64vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 1%;
-      margin-top: 50px;
-      box-sizing: border-box;
-      position: relative;
-    }
-  
-    /* Increased text width */
+  /* Main Styles */
+  .horizontal-scroll-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Slide container */
+  .horizontal-scroll-section .slide-container {
+    width: 500%;
+    height: 74vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overscroll-behavior: none;
+  }
+  /* Individual slides */
+  .horizontal-scroll-section .slide {
+    border: solid 1px white;
+    border-radius: 20px;
+    margin-right: 20px;
+    width: 20%;
+    height: 64vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1%;
+    margin-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  /* Increased text width */
+  .horizontal-scroll-section .slide-content {
+    display: flex;
+    width: 100%;
+    max-width: 1500px; /* Increased from 1400px */
+    margin: 0 auto;
+    align-items: center;
+    gap: 60px; /* Slightly reduced gap to give more space to text */
+  }
+
+  .horizontal-scroll-section .text-content {
+    flex: 1.2; /* Increased from 1 to give more width to text */
+    min-width: 283px; /* Ensures text has minimum width */
+    max-width: 800px; /* Limits text width for readability */
+  }
+
+  .horizontal-scroll-section .image-content {
+    flex: 1;
+    position: relative;
+    height: 55vh;
+    max-width: 700px; /* Slightly reduced image width */
+  }
+
+  .horizontal-scroll-section .slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+
+  /* Original section styles */
+  .inner {
+    position: relative;
+  }
+  .inner__wrapper {
+    position: relative;
+  }
+  .content__block {
+    position: relative;
+  }
+  .animate-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .section-name {
+    display: inline-flex;
+    align-items: center;
+  }
+  .section-name-caption {
+    margin-right: 10px;
+  }
+  .ph {
+    font-style: normal;
+  }
+
+  /* Typography adjustments for wider text */
+  .horizontal-scroll-section .slide .type-basic-160lh {
+    font-size: 2.2rem; /* Slightly larger font */
+    line-height: 1.8; /* Better line spacing */
+    max-width: 100%; /* Allows text to use available width */
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
     .horizontal-scroll-section .slide-content {
-      display: flex;
-      width: 100%;
-      max-width: 1500px; /* Increased from 1400px */
-      margin: 0 auto;
-      align-items: center;
-      gap: 60px; /* Slightly reduced gap to give more space to text */
+      flex-direction: column;
+      gap: 30px;
+      max-width: 100%;
     }
-  
+
     .horizontal-scroll-section .text-content {
-      flex: 1.2; /* Increased from 1 to give more width to text */
-      min-width: 283px; /* Ensures text has minimum width */
-      max-width: 800px; /* Limits text width for readability */
+      min-width: 100%;
+      max-width: 100%;
+      padding: 0 20px;
     }
-  
+
     .horizontal-scroll-section .image-content {
-      flex: 1;
-      position: relative;
-      height: 55vh;
-      max-width: 700px; /* Slightly reduced image width */
-    }
-  
-    .horizontal-scroll-section .slide-img {
+      height: 40vh;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 16px;
+      max-width: 100%;
     }
-  
-    /* Original section styles */
-    .inner { position: relative; }
-    .inner__wrapper { position: relative; }
-    .content__block { position: relative; }
-    .animate-in-up { opacity: 0; transform: translateY(20px); }
-    .section-name { display: inline-flex; align-items: center; }
-    .section-name-caption { margin-right: 10px; }
-    .ph { font-style: normal; }
-  
-    /* Typography adjustments for wider text */
-    .horizontal-scroll-section .slide .type-basic-160lh {
-      font-size: 2.2rem; /* Slightly larger font */
-      line-height: 1.8; /* Better line spacing */
-      max-width: 100%; /* Allows text to use available width */
-    }
-  
-    /* Mobile responsive */
-    @media (max-width: 768px) {
-      .horizontal-scroll-section .slide-content {
-        flex-direction: column;
-        gap: 30px;
-        max-width: 100%;
-      }
-      
-      .horizontal-scroll-section .text-content {
-        min-width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-      }
-      
-      .horizontal-scroll-section  .image-content {
-        height: 40vh;
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
-  
-  <!-- HTML Section -->
-  <section id="story" class="inner inner-stack-bottom story horizontal-scroll-section">
-    <div class="inner__wrapper">
-      <div class="container-fluid p-0">
-        <div class="row g-0">
-          <div class="col-12 col-xl-2">
-            <div class="inner__name">
-              <div class="content__block name-block">
-                <span class="section-name icon-right animate-in-up">
-                  <span class="section-name-caption">Our Story</span>
-                  <i class="ph ph-arrow-right"></i>
-                </span>
-              </div>
+  }
+</style>
+
+<!-- HTML Section -->
+<section id="story" class="inner inner-stack-bottom story horizontal-scroll-section">
+  <div class="inner__wrapper">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12 col-xl-2">
+          <div class="inner__name">
+            <div class="content__block name-block">
+              <span class="section-name icon-right animate-in-up">
+                <span class="section-name-caption">Our Story</span>
+                <i class="ph ph-arrow-right"></i>
+              </span>
             </div>
           </div>
-  
-          <div class="col-12 col-xl-8">
-            <div class="inner__content">
-              <div class="content__block pre-stack-text-block">
-                <div class="block__descr">
-                  <h2 class="reveal-type animate-in-up">
-                    How we got here.
-                  </h2>
-                  <p class="h2__text type-basic-160lh animate-in-up">
-                    A quick journey through our beginnings and <strong>what makes ConversionUnlocked different</strong> from other agencies.
-                  </p>
-                </div>
-              </div>
-  
-              <div class="slide-container">
-                <!-- Slide 1 -->  
-                <div class="slide">
-                  <div class="slide-content">
-                    <div class="text-content">
-                      <h3>Hi, my name is <strong>Abdo</strong></h3>
-                      <p class="type-basic-160lh">
-                        I'm the CEO of ConversionUnlocked<br><br>
-                        I want to tell you a very short story and take you back in time—<br><br>
-                        <strong>On how we got here.</strong><br><br>
-                        Let's get started.
-                      </p>
-                    </div>
-                    <div class="image-content">
-                      <img
-                        class="slide-img"
-                        src="images/abdo.png"
-                        alt="Abdo introduction"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 2 -->
-                <div class="slide">
-                  <div class="slide-content">
-                    <div class="text-content">
-                      <h3>Oops! Maybe that was too much.</h3>
-                      <p class="type-basic-160lh">
-                        <em>Excuse my joking appetite.</em><br><br>
-                        This is me—<strong>Passionate Abdo</strong>, the website developer.<br><br>
-                        There and then where I found my passion in creating websites.
-                      </p>
-                    </div>
-                    <div class="image-content">
-                      <img
-                        class="slide-img"
-                        src="images/abdo2.jpg"
-                        alt="Joking moment"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 3 -->
-                <div class="slide">
-                  <div class="slide-content">
-                    <div class="text-content">
-                      <h3>The Early Days</h3>
-                      <p class="type-basic-160lh">
-                        I loved how a website can <strong>tell a story</strong> and <strong>provoke action</strong>.<br><br>
-                        The cool thing is that I found this passion <strong>early on</strong>.<br><br>
-                        So I quit college and went all in on websites (that was a bold move ngl).<br><br>
-                        I built websites for almost every space and type at the time.
-                      </p>
-                    </div>
-                    <div class="image-content">
-                      <img
-                        class="slide-img"
-                        src="images/abdo3.webp"
-                        alt="Early days of web development"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 4 -->
-                <div class="slide">
-                  <div class="slide-content">
-                    <div class="text-content">
-                      <h3>The Birth of ConversionUnlocked</h3>
-                      <p class="type-basic-160lh">
-                        3 years later, I decided to build <strong>ConversionUnlocked</strong><br><br>
-                        <strong>AND THIS IS WHERE OUR STORY BEGINS</strong><br><br>
-                        It started off as a freelance project—my landing pages were stunning, but the business struggled ☹️<br><br>
-                        I soon realized there was much more to creating an agency than just building nice-looking pages...
-                      </p>
-                    </div>
-                    <div class="image-content">
-                      <img
-                        class="slide-img"
-                        src="images/abdo4.jpg"
-                        alt="Agency beginnings"
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- Slide 5 -->
-                <div class="slide">
-                  <div class="slide-content">
-                    <div class="text-content">
-                      <h3>Our Transformation</h3>
-                      <p class="type-basic-160lh">
-                        From <strong>client acquisition</strong> to <strong>customer success</strong>, I had no idea what that even meant.<br><br>
-                        So I started learning from people like Alex Hormozi and Neil Patel—<br><br>
-                        reading, consuming and building.<br><br>
-                        After an intense 6 months, we transitioned into a <strong>profitable CRO agency</strong>,<br><br>
-                        delivering high-converting landing pages and ongoing CRO support for brands like yours!
-                      </p>
-                    </div>
-                    <div class="image-content">
-                      <img
-                        class="slide-img"
-                        src="images/abdo5.jpg"
-                        alt="Agency success"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="col-12 col-xl-2"></div>
         </div>
+
+        <div class="col-12 col-xl-8">
+          <div class="inner__content">
+            <div class="content__block pre-stack-text-block">
+              <div class="block__descr">
+                <h2 class="reveal-type animate-in-up">How we got here.</h2>
+                <p class="h2__text type-basic-160lh animate-in-up">A quick journey through our beginnings and <strong>what makes ConversionUnlocked different</strong> from other agencies.</p>
+              </div>
+            </div>
+
+            <div class="slide-container">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="text-content">
+                    <h3>Hi, my name is <strong>Abdo</strong></h3>
+                    <p class="type-basic-160lh">
+                      I'm the CEO of ConversionUnlocked<br /><br />
+                      I want to tell you a very short story and take you back in time—<br /><br />
+                      <strong>On how we got here.</strong><br /><br />
+                      Let's get started.
+                    </p>
+                  </div>
+                  <div class="image-content">
+                    <img class="slide-img" src="images/abdo.png" alt="Abdo introduction" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="text-content">
+                    <h3>Oops! Maybe that was too much.</h3>
+                    <p class="type-basic-160lh">
+                      <em>Excuse my joking appetite.</em><br /><br />
+                      This is me—<strong>Passionate Abdo</strong>, the website developer.<br /><br />
+                      There and then where I found my passion in creating websites.
+                    </p>
+                  </div>
+                  <div class="image-content">
+                    <img class="slide-img" src="images/abdo2.jpg" alt="Joking moment" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="text-content">
+                    <h3>The Early Days</h3>
+                    <p class="type-basic-160lh">
+                      I loved how a website can <strong>tell a story</strong> and <strong>provoke action</strong>.<br /><br />
+                      The cool thing is that I found this passion <strong>early on</strong>.<br /><br />
+                      So I quit college and went all in on websites (that was a bold move ngl).<br /><br />
+                      I built websites for almost every space and type at the time.
+                    </p>
+                  </div>
+                  <div class="image-content">
+                    <img class="slide-img" src="images/abdo3.webp" alt="Early days of web development" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="text-content">
+                    <h3>The Birth of ConversionUnlocked</h3>
+                    <p class="type-basic-160lh">
+                      3 years later, I decided to build <strong>ConversionUnlocked</strong><br /><br />
+                      <strong>AND THIS IS WHERE OUR STORY BEGINS</strong><br /><br />
+                      It started off as a freelance project—my landing pages were stunning, but the business struggled ☹️<br /><br />
+                      I soon realized there was much more to creating an agency than just building nice-looking pages...
+                    </p>
+                  </div>
+                  <div class="image-content">
+                    <img class="slide-img" src="images/abdo4.jpg" alt="Agency beginnings" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 5 -->
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="text-content">
+                    <h3>Our Transformation</h3>
+                    <p class="type-basic-160lh">
+                      From <strong>client acquisition</strong> to <strong>customer success</strong>, I had no idea what that even meant.<br /><br />
+                      So I started learning from people like Alex Hormozi and Neil Patel—<br /><br />
+                      reading, consuming and building.<br /><br />
+                      After an intense 6 months, we transitioned into a <strong>profitable CRO agency</strong>,<br /><br />
+                      delivering high-converting landing pages and ongoing CRO support for brands like yours!
+                    </p>
+                  </div>
+                  <div class="image-content">
+                    <img class="slide-img" src="images/abdo5.jpg" alt="Agency success" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-xl-2"></div>
       </div>
     </div>
-  </section>
-  
-  <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Register plugins
-      gsap.registerPlugin(ScrollTrigger);
-      
-      // Select elements
-      const container = document.querySelector('.slide-container');
-      const slides = gsap.utils.toArray('.slide');
-      const section = document.querySelector('.horizontal-scroll-section');
-      
-      // Calculate total width
-      let totalWidth = 570;
-      slides.forEach(slide => {
-        totalWidth += slide.offsetWidth;
-      });
-      
-      // ADJUST THIS VALUE TO CHANGE WHEN SCROLLING STARTS (in pixels)
-      const startOffset = -130; // Starts 100px above center (negative = higher, positive = lower)
-      
-      // Horizontal scroll animation
-      ScrollTrigger.create({
-        trigger: section,
-        start: () => `center ${window.innerHeight/2 + startOffset}`, // Adjustable start position
-        end: () => `+=${totalWidth - window.innerWidth}`,
-        pin: true,
-        scrub: 1.2,
-  
-        onEnter: () => {
-          document.body.style.overflow = 'hidden';
-        },
-        onLeaveBack: () => {
-          document.body.style.overflow = '';
-        },
-        onUpdate: (self) => {
-          if (self.isActive) {
-            const progress = self.progress;
-            gsap.to(container, {
-              x: -progress * (totalWidth - window.innerWidth),
-              ease: "none"
-            });
-          }
-        }
-      });
-      
-      // Animate in elements
-      gsap.to('.animate-in-up', {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%'
-        }
-      });
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Register plugins
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Select elements
+    const container = document.querySelector(".slide-container");
+    const slides = gsap.utils.toArray(".slide");
+    const section = document.querySelector(".horizontal-scroll-section");
+
+    // Calculate total width
+    let totalWidth = 570;
+    slides.forEach((slide) => {
+      totalWidth += slide.offsetWidth;
     });
-  </script>
 
+    // ADJUST THIS VALUE TO CHANGE WHEN SCROLLING STARTS (in pixels)
+    const startOffset = -130; // Starts 100px above center (negative = higher, positive = lower)
 
+    // Horizontal scroll animation
+    ScrollTrigger.create({
+      trigger: section,
+      start: () => `center ${window.innerHeight / 2 + startOffset}`, // Adjustable start position
+      end: () => `+=${totalWidth - window.innerWidth}`,
+      pin: true,
+      scrub: 1.2,
 
+      onEnter: () => {
+        document.body.style.overflow = "hidden";
+      },
+      onLeaveBack: () => {
+        document.body.style.overflow = "";
+      },
+      onUpdate: (self) => {
+        if (self.isActive) {
+          const progress = self.progress;
+          gsap.to(container, {
+            x: -progress * (totalWidth - window.innerWidth),
+            ease: "none",
+          });
+        }
+      },
+    });
+
+    // Animate in elements
+    gsap.to(".animate-in-up", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",
+      },
+    });
+  });
+</script>
 
 <!-- section for the benefits of working with us with flat images -->
 <div class="content__block">
   <div class="stack-wrapper">
-   <div class="stack-offset"></div>
-   <div class="services-stack">
-    <!-- services stack single item -->
-    <div class="stack-item">
-     <div class="services-stack__inner">
-      <div class="services-stack__title">
-       <h3>Speed.</h3>
-       <p class="services-stack__text type-basic-160lh" style="width: 300px;padding-top: 30px;">
-       <!-- <i class="ph ph-bezier-curve"></i> -->
-        Respond in minutes, deliver in days. we prioritize speed in everything we do.
-       </p>
-      </div>
-      <div class="services-stack__descr">
-      </div>
-      <div class="services-stack__image">
-       <img
-        class="lazy service-img service-img-s"
-        data-src="./images/speed.png"
-        alt="Service/Feature Image"
-       />
-       <img
-        class="lazy service-img service-img-m"
-        style="    width: 62%;object-fit: contain;"
-        data-src="./images/speed.png"
-        alt="Service/Feature Image"
-       />
-      </div>
-     </div>
-    </div>
-    <!-- services stack single item -->
-    <div class="stack-item">
-     <div class="services-stack__inner">
-      <div class="services-stack__title">
-       <h3>Zero friction.</h3>
-       <p class="services-stack__text type-basic-160lh" style="    width: 300px;
-padding-top: 30px;">
-       <!-- <i class="ph ph-code"></i> -->
-        No endless email threads or lengthy calls—all updates and communication will be async through our client portal.
-       </p>
-      </div>
-      <div class="services-stack__descr">
-      </div>
-      <div class="services-stack__image">
-       <img
-        class="lazy service-img service-img-s"
-        data-src="./images/fric.png"
-        alt="Service/Feature Image"
-       />
-       <img
-        class="lazy service-img service-img-m"
-        data-src="images/fric.png"
-        alt="Service/Feature Image"
-       />
-      </div>
-     </div>
-    </div>
-    <!-- services stack single item -->
-    <div class="stack-item">
-     <div class="services-stack__inner">
-      <div class="services-stack__title">
-       <h3>Reliability.</h3>
-       <p class="services-stack__text type-basic-160lh" style="    width: 300px;
-padding-top: 30px;">
-       <!-- <i class="ph ph-cube"></i> -->
-        No pointless  questions, asking for assets or unnecessary back-and-forth, Everything we need will be collected through short and concise forms.
-       </p>
-      </div>
-      <div class="services-stack__descr">
-      </div>
-      <div class="services-stack__image">
-       <img
-        class="lazy service-img service-img-s"
-        data-src="images/reliable.png"
-        alt="Service/Feature Image"
-       />
-       <img
-        class="lazy service-img service-img-m"
-        style="    width: 62%;object-fit: contain;"
-        data-src="images/reliable.png"
-        alt="Service/Feature Image"
-       />
-      </div>
-     </div>
-    </div>
-    <!-- services stack single item -->
-    <div class="stack-item">
-     <div class="services-stack__inner">
-      <div class="services-stack__title">
-       <h3>Client-First.</h3>
-       <p class="services-stack__text type-basic-160lh" style="    width: 300px;
-padding-top: 30px;">
-       <!-- <i class="ph ph-graph"></i> -->
-        If you are not satisfied we are not satisfied, that’s why we will keep perfecting our work until it exceeds your expectations, and worst case? you will get your Money back, 100% guaranteed!
-       </p>
-      </div>
-      <div class="services-stack__descr">
-      </div>
-      <div class="services-stack__image">
-       <img
-        class="lazy service-img service-img-s"
-        style="    width: 57%;object-fit: contain;"
-        data-src="images/guarantee.png"
-        alt="Service/Feature Image"
-       />
-       <img
-        class="lazy service-img service-img-m"
-        style="    width: 57%;object-fit: contain;"
-        data-src="images/guarantee.png"
-        alt="Service/Feature Image"
-       />
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </div>
-
- <section id="services" class="inner inner-stack-bottom services">
-  <div class="inner__wrapper">
-   <div class="container-fluid p-0">
-    <div class="row g-0">
-     <div class="col-12 col-xl-2">
-      <div class="inner__name">
-       <div class="content__block name-block">
-        <span class="section-name icon-right animate-in-up">
-         <span class="section-name-caption">Benefits</span>
-         <i class="ph ph-arrow-down-right"></i>
-        </span>
-       </div>
-      </div>
-     </div>
-
-     <div class="col-12 col-xl-8">
-      <div class="inner__content">
-       <div class="content__block pre-stack-text-block">
-        <div class="block__descr">
-         <h2 class="reveal-type animate-in-up">
-          Why us?
-         </h2>
-         <p class="h2__text type-basic-160lh animate-in-up">
-          We have spent over <i class="italic"> 6 months</i> nailing our service down - before even launching, because we understood that <strong> it takes more then a good looking landing page to get results for our customers.</strong>
-         </p>
+    <div class="stack-offset"></div>
+    <div class="services-stack">
+      <!-- services stack single item -->
+      <div class="stack-item">
+        <div class="services-stack__inner">
+          <div class="services-stack__title">
+            <h3>Speed.</h3>
+            <p class="services-stack__text type-basic-160lh" style="width: 300px; padding-top: 30px">
+              <!-- <i class="ph ph-bezier-curve"></i> -->
+              Respond in minutes, deliver in days. we prioritize speed in everything we do.
+            </p>
+          </div>
+          <div class="services-stack__descr"></div>
+          <div class="services-stack__image">
+            <img class="lazy service-img service-img-s" data-src="./images/speed.png" alt="Service/Feature Image" />
+            <img class="lazy service-img service-img-m" style="width: 62%; object-fit: contain" data-src="./images/speed.png" alt="Service/Feature Image" />
+          </div>
         </div>
-       </div>
-       <!-- Content Block - H2 Section Title End -->
-
-       <!-- Content Block - Services/Features Stacking Cards Block Start -->
-
-       <!-- Content Block - Services/Features Stacking Cards Block End -->
       </div>
-     </div>
-     <!-- Inner Section Content End -->
-
-     <!-- Inner Section Aside Start -->
-     <div class="col-12 col-xl-2"></div>
-     <!-- Inner Section Aside End -->
+      <!-- services stack single item -->
+      <div class="stack-item">
+        <div class="services-stack__inner">
+          <div class="services-stack__title">
+            <h3>Zero friction.</h3>
+            <p class="services-stack__text type-basic-160lh" style="width: 300px; padding-top: 30px">
+              <!-- <i class="ph ph-code"></i> -->
+              No endless email threads or lengthy calls—all updates and communication will be async through our client portal.
+            </p>
+          </div>
+          <div class="services-stack__descr"></div>
+          <div class="services-stack__image">
+            <img class="lazy service-img service-img-s" data-src="./images/fric.png" alt="Service/Feature Image" />
+            <img class="lazy service-img service-img-m" data-src="images/fric.png" alt="Service/Feature Image" />
+          </div>
+        </div>
+      </div>
+      <!-- services stack single item -->
+      <div class="stack-item">
+        <div class="services-stack__inner">
+          <div class="services-stack__title">
+            <h3>Reliability.</h3>
+            <p class="services-stack__text type-basic-160lh" style="width: 300px; padding-top: 30px">
+              <!-- <i class="ph ph-cube"></i> -->
+              No pointless  questions, asking for assets or unnecessary back-and-forth, Everything we need will be collected through short and concise forms.
+            </p>
+          </div>
+          <div class="services-stack__descr"></div>
+          <div class="services-stack__image">
+            <img class="lazy service-img service-img-s" data-src="images/reliable.png" alt="Service/Feature Image" />
+            <img class="lazy service-img service-img-m" style="width: 62%; object-fit: contain" data-src="images/reliable.png" alt="Service/Feature Image" />
+          </div>
+        </div>
+      </div>
+      <!-- services stack single item -->
+      <div class="stack-item">
+        <div class="services-stack__inner">
+          <div class="services-stack__title">
+            <h3>Client-First.</h3>
+            <p class="services-stack__text type-basic-160lh" style="width: 300px; padding-top: 30px">
+              <!-- <i class="ph ph-graph"></i> -->
+              If you are not satisfied we are not satisfied, that’s why we will keep perfecting our work until it exceeds your expectations, and worst case? you will get your Money back, 100% guaranteed!
+            </p>
+          </div>
+          <div class="services-stack__descr"></div>
+          <div class="services-stack__image">
+            <img class="lazy service-img service-img-s" style="width: 57%; object-fit: contain" data-src="images/guarantee.png" alt="Service/Feature Image" />
+            <img class="lazy service-img service-img-m" style="width: 57%; object-fit: contain" data-src="images/guarantee.png" alt="Service/Feature Image" />
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
   </div>
- </section>
+</div>
+
+<section id="services" class="inner inner-stack-bottom services">
+  <div class="inner__wrapper">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12 col-xl-2">
+          <div class="inner__name">
+            <div class="content__block name-block">
+              <span class="section-name icon-right animate-in-up">
+                <span class="section-name-caption">Benefits</span>
+                <i class="ph ph-arrow-down-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-xl-8">
+          <div class="inner__content">
+            <div class="content__block pre-stack-text-block">
+              <div class="block__descr">
+                <h2 class="reveal-type animate-in-up">Why us?</h2>
+                <p class="h2__text type-basic-160lh animate-in-up">We have spent over <i class="italic"> 6 months</i> nailing our service down - before even launching, because we understood that <strong> it takes more then a good looking landing page to get results for our customers.</strong></p>
+              </div>
+            </div>
+            <!-- Content Block - H2 Section Title End -->
+
+            <!-- Content Block - Services/Features Stacking Cards Block Start -->
+
+            <!-- Content Block - Services/Features Stacking Cards Block End -->
+          </div>
+        </div>
+        <!-- Inner Section Content End -->
+
+        <!-- Inner Section Aside Start -->
+        <div class="col-12 col-xl-2"></div>
+        <!-- Inner Section Aside End -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="inner inner-grid-bottom about">
+  <div class="inner__wrapper">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <!-- Inner Section Name Start -->
+        <div class="col-12 col-xl-2">
+          <div class="inner__name">
+            <!-- Content Block - Section Name Start -->
+            <div class="content__block name-block">
+              <span class="section-name icon-right animate-in-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1">
+                <span class="section-name-caption">About me</span>
+                <i class="ph ph-arrow-down-right"></i>
+              </span>
+            </div>
+            <!-- Content Block - Section Name Start -->
+          </div>
+        </div>
+        <!-- Inner Section Name End -->
+
+        <!-- Inner Section Content Start -->
+        <div class="col-12 col-xl-8">
+          <div class="inner__content">
+            <!-- Content Block - H2 Section Title Start -->
+            <div class="content__block section-text-title">
+              <div class="block__descr">
+                <h2 class="reveal-type animate-in-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1">
+                  <div class="word" style="display: inline-block">
+                    <div class="char" style="display: inline-block; opacity: 1">A</div>
+                    <div class="char" style="display: inline-block; opacity: 1">p</div>
+                    <div class="char" style="display: inline-block; opacity: 1">p</div>
+                    <div class="char" style="display: inline-block; opacity: 1">r</div>
+                    <div class="char" style="display: inline-block; opacity: 1">o</div>
+                    <div class="char" style="display: inline-block; opacity: 1">a</div>
+                    <div class="char" style="display: inline-block; opacity: 1">c</div>
+                    <div class="char" style="display: inline-block; opacity: 1">h</div>
+                  </div>
+                  <div class="word" style="display: inline-block">
+                    <div class="char" style="display: inline-block; opacity: 1">a</div>
+                    <div class="char" style="display: inline-block; opacity: 1">n</div>
+                    <div class="char" style="display: inline-block; opacity: 1">d</div>
+                  </div>
+                  <br />
+                  <div class="word" style="display: inline-block">
+                    <div class="char" style="display: inline-block; opacity: 1">p</div>
+                    <div class="char" style="display: inline-block; opacity: 1">h</div>
+                    <div class="char" style="display: inline-block; opacity: 1">i</div>
+                    <div class="char" style="display: inline-block; opacity: 1">l</div>
+                    <div class="char" style="display: inline-block; opacity: 1">o</div>
+                    <div class="char" style="display: inline-block; opacity: 1">s</div>
+                    <div class="char" style="display: inline-block; opacity: 1">o</div>
+                    <div class="char" style="display: inline-block; opacity: 1">p</div>
+                    <div class="char" style="display: inline-block; opacity: 1">h</div>
+                    <div class="char" style="display: inline-block; opacity: 1">y</div>
+                  </div>
+                </h2>
+              </div>
+            </div>
+            <!-- Content Block - H2 Section Title End -->
+
+            <!-- Content Block - About Me Data Start -->
+            <div class="content__block grid-block pre-offcanvas-grid-block">
+              <div class="container-fluid p-0">
+                <div class="row g-0 justify-content-between">
+                  <div class="col-12 col-md-4 grid-item about-info pre-title" style="border-radius: 10px">
+                    <div class=" " style="border-radius: 10px; width: 100%">
+                      <img src="http://127.0.0.1:5501/images/mememem.jpg" alt="Image" style="border-radius: 10px" />
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-8 grid-item about-descr pre-title">
+                    <p class="about-descr__text type-basic-160lh" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1">Over 18 years grinding alongside founders with a chip on their shoulder and a story that needs telling.</p>
+                    <p class="about-descr__text type-basic-160lh animate-in-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 0.8">Off Menu is the design partner teams turn to when speed and quality matter most. Our approach is fast and flexible - purpose built for startup speed.</p>
+
+                    <p class="about-descr__text type-basic-160lh animate-in-up" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 0.8">Over 18 years grinding alongside founders with a chip on their shoulder and a story that needs telling.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content Block - About Me Data End -->
+          </div>
+        </div>
+        <!-- Inner Section Content End -->
+
+        <!-- Inner Section Aside Start -->
+        <div class="col-12 col-xl-2"></div>
+        <!-- Inner Section Aside End -->
+      </div>
+    </div>
+
+    <!-- Inner Section Off-canvas Content (Fullwidth Social Media Marquee & Lines) Start -->
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <!-- Content Block - Follow Me Marquee with SVG Objects Start -->
+          <div class="content__block no-padding">
+            <!-- Marquee V1 Divider Start -->
+            <div class="items items--gsap">
+              <div class="items__container" style="translate: none; rotate: none; scale: none; transform: translate3d(7.6378%, 0px, 0px)">
+                <!-- single item -->
+                <div class="item icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
+                    <g>
+                      <rect x="45.7" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.8412 -0.5407 0.5407 0.8412 -17.8476 32.3497)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.4155 -0.9096 0.9096 0.4155 -15.3764 69.2119)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.9898 -0.1425 0.1425 0.9898 -6.1646 7.0506)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.7556 -0.655 0.655 0.7556 -19.2157 41.618)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.2812 -0.9597 0.9597 0.2812 -11.5032 77.7858)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.9595 -0.2817 0.2817 0.9595 -11.2479 14.8866)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.6549 -0.7557 0.7557 0.6549 -19.2631 50.9572)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.1423 -0.9898 0.9898 0.1423 -6.4999 85.629)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.9097 -0.4153 0.4153 0.9097 -15.1716 23.381)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.5411 -0.8409 0.8409 0.5411 -17.9774 60.1901)" class="st0" width="93.1" height="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <!-- single item -->
+                <div class="item image image-1">
+                  <img src="img/marquee/01.webp" alt="Image" />
+                </div>
+                <!-- single item -->
+                <div class="item icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.2 82.8" fill="currentColor">
+                    <g>
+                      <g>
+                        <rect class="st0" width="89.2" height="1"></rect>
+                        <rect y="20.5" class="st0" width="89.2" height="1"></rect>
+                        <rect y="40.9" class="st0" width="89.2" height="1"></rect>
+                        <rect y="61.4" class="st0" width="89.2" height="1"></rect>
+                        <rect y="81.8" class="st0" width="89.2" height="1"></rect>
+                      </g>
+                      <rect x="2.5" y="10.2" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -1.2518 11.1229)" class="st0" width="85.7" height="1"></rect>
+                      <rect x="2.5" y="30.7" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -6.1265 11.7116)" class="st0" width="85.7" height="1"></rect>
+                      <rect x="2.5" y="51.2" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -11.0059 12.3009)" class="st0" width="85.7" height="1"></rect>
+                      <rect x="2.5" y="71.6" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -15.8827 12.8923)" class="st0" width="85.7" height="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <!-- single item -->
+                <div class="item image image-2">
+                  <img src="img/marquee/02.webp" alt="Image" />
+                </div>
+                <!-- single item -->
+                <div class="item icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" fill="currentColor">
+                    <g>
+                      <path
+                        d="M42,84C18.8,84,0,65.1,0,42S18.8,0,42,0s42,18.8,42,42S65.1,84,42,84z M42,1C19.4,1,1,19.4,1,42
+                        s18.4,41,41,41s41-18.4,41-41S64.6,1,42,1z"
+                      ></path>
+                      <path
+                        d="M42,69.8c-15.8,0-28.6-12.8-28.6-28.6h1c0,15.2,12.4,27.6,27.6,27.6s27.6-12.4,27.6-27.6h1
+                        C70.6,57,57.7,69.8,42,69.8z"
+                      ></path>
+                      <g>
+                        <path
+                          d="M31.7,31.1H17.8v-0.5c0-3.8,3.1-7,7-7s7,3.1,7,7L31.7,31.1L31.7,31.1z M18.8,30.1h11.9
+                          c-0.2-3-2.8-5.5-5.9-5.5S19.1,27.1,18.8,30.1L18.8,30.1z"
+                        ></path>
+                        <path
+                          d="M66.2,31.1H52.2v-0.5c0-3.8,3.1-7,7-7s7,3.1,7,7L66.2,31.1L66.2,31.1z M53.3,30.1h11.9
+                          c-0.2-3-2.8-5.5-5.9-5.5S53.5,27.1,53.3,30.1L53.3,30.1z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <!-- single item -->
+                <div class="item image image-3">
+                  <img src="img/marquee/03.webp" alt="Image" />
+                </div>
+
+                <!-- single item -->
+                <div class="item icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.3 93.1" fill="currentColor">
+                    <g>
+                      <rect x="45.7" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.8412 -0.5407 0.5407 0.8412 -17.8476 32.3497)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.4155 -0.9096 0.9096 0.4155 -15.3764 69.2119)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.9898 -0.1425 0.1425 0.9898 -6.1646 7.0506)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.7556 -0.655 0.655 0.7556 -19.2157 41.618)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.2812 -0.9597 0.9597 0.2812 -11.5032 77.7858)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.9595 -0.2817 0.2817 0.9595 -11.2479 14.8866)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.6549 -0.7557 0.7557 0.6549 -19.2631 50.9572)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="45.7" y="0" transform="matrix(0.1423 -0.9898 0.9898 0.1423 -6.4999 85.629)" class="st0" width="1" height="93.1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.9097 -0.4153 0.4153 0.9097 -15.1716 23.381)" class="st0" width="93.1" height="1"></rect>
+                      <rect x="-0.4" y="46.1" transform="matrix(0.5411 -0.8409 0.8409 0.5411 -17.9774 60.1901)" class="st0" width="93.1" height="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <!-- single item -->
+                <div class="item image image-1">
+                  <img src="img/marquee/01.webp" alt="Image" />
+                </div>
+                <!-- single item -->
+                <div class="item icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89.2 82.8" fill="currentColor">
+                    <g>
+                      <g>
+                        <rect class="st0" width="89.2" height="1"></rect>
+                        <rect y="20.5" class="st0" width="89.2" height="1"></rect>
+                        <rect y="40.9" class="st0" width="89.2" height="1"></rect>
+                        <rect y="61.4" class="st0" width="89.2" height="1"></rect>
+                        <rect y="81.8" class="st0" width="89.2" height="1"></rect>
+                      </g>
+                      <rect x="2.5" y="10.2" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -1.2518 11.1229)" class="st0" width="85.7" height="1"></rect>
+                      <rect x="2.5" y="30.7" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -6.1265 11.7116)" class="st0" width="85.7" height="1"></rect>
+                      <rect x="2.5" y="51.2" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -11.0059 12.3009)" class="st0" width="85.7" height="1"></rect>
+                      <rect x="2.5" y="71.6" transform="matrix(0.9712 -0.2384 0.2384 0.9712 -15.8827 12.8923)" class="st0" width="85.7" height="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <!-- single item -->
+                <div class="item image image-2">
+                  <img src="img/marquee/02.webp" alt="Image" />
+                </div>
+                <!-- single item -->
+                <div class="item icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" fill="currentColor">
+                    <g>
+                      <path
+                        d="M42,84C18.8,84,0,65.1,0,42S18.8,0,42,0s42,18.8,42,42S65.1,84,42,84z M42,1C19.4,1,1,19.4,1,42
+                        s18.4,41,41,41s41-18.4,41-41S64.6,1,42,1z"
+                      ></path>
+                      <path
+                        d="M42,69.8c-15.8,0-28.6-12.8-28.6-28.6h1c0,15.2,12.4,27.6,27.6,27.6s27.6-12.4,27.6-27.6h1
+                        C70.6,57,57.7,69.8,42,69.8z"
+                      ></path>
+                      <g>
+                        <path
+                          d="M31.7,31.1H17.8v-0.5c0-3.8,3.1-7,7-7s7,3.1,7,7L31.7,31.1L31.7,31.1z M18.8,30.1h11.9
+                          c-0.2-3-2.8-5.5-5.9-5.5S19.1,27.1,18.8,30.1L18.8,30.1z"
+                        ></path>
+                        <path
+                          d="M66.2,31.1H52.2v-0.5c0-3.8,3.1-7,7-7s7,3.1,7,7L66.2,31.1L66.2,31.1z M53.3,30.1h11.9
+                          c-0.2-3-2.8-5.5-5.9-5.5S53.5,27.1,53.3,30.1L53.3,30.1z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <!-- single item -->
+                <div class="item image image-3">
+                  <img src="img/marquee/03.webp" alt="Image" />
+                </div>
+              </div>
+            </div>
+            <!-- Marquee V1 Divider End -->
+          </div>
+          <!-- Content Block - Follow Me Marquee with SVG Objects End -->
+        </div>
+      </div>
+    </div>
+    <!-- Inner Section Off-canvas Content (Fullwidth Social Media Marquee & Lines) Start -->
+  </div>
+</section>
+
+
+
+
+<section id="faq" class="inner faq inner-grid-bottom no-padding-bottom">
+  <div class="inner__wrapper">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12 col-xl-2">
+          <div class="inner__name">
+            <div class="content__block name-block">
+              <span class="section-name icon-right animate-in-up">
+                <span class="section-name-caption">FAQ</span>
+                <i class="ph ph-arrow-down-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-8">
+          <div class="inner__content">
+            <div class="content__block section-title">
+              <div class="block__descr">
+                <h2 class="reveal-type animate-in-up">Frequently Asked Questions</h2>
+                <p class="h2__text text-twothirds type-basic-160lh animate-in-up">Here are some common questions i usually get asked. If you have further questions, don't hesitate to reach out at <a class="fw-bold link-inline text-link" href="mailto:abdo@abdowebdesign.com">abdo@abdowebdesign.com</a></p>
+              </div>
+            </div>
+            <!-- Content Block - FAQ Start -->
+            <div class="content__block grid-block pre-grid-items">
+              <div class="faq-container animate-in-up">
+                <div class="faq-item">
+                  <h3 class="faq-question" onclick="toggleFAQ(this)">
+                    How are you so fast and so good at the same time?
+                    <span class="faqicon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                      </svg>
+                    </span>
+                  </h3>
+                  <p class="faq-answer">the tight deadlines when working for companies and agencies forced me to deliver high-quality work at a fast speed. I did lose some hair as a cost of that 😄, but it taught me how to deliver high-quality service on time.</p>
+                </div>
+                <div class="faq-item">
+                  <h3 class="faq-question" onclick="toggleFAQ(this)">
+                    How could you be so young and so good at the same time?
+                    <span class="faqicon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                      </svg>
+                    </span>
+                  </h3>
+                  <p class="faq-answer">Simple: I started early, learned a lot, and received mentorship. I was hard-working and paid attention to the details.</p>
+                </div>
+                <div class="faq-item">
+                  <h3 class="faq-question" onclick="toggleFAQ(this)">
+                    Why not hire a reputable agency?
+                    <span class="faqicon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                      </svg>
+                    </span>
+                  </h3>
+                  <p class="faq-answer">Hiring a reputable agency is a great option, but I’ve worked for many agencies and found that projects can often get dragged out, as their focus is split across many projects.</p>
+                </div>
+                <!-- <div class="faq-item open">
+                  <h3 class="faq-question" onclick="toggleFAQ(this)">
+                    How long does the process take?
+                    <span class="faqicon">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g><path d="M6 12H18M12 6V18" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></g>
+                      </svg>
+                    </span>
+                  </h3>
+                  <p class="faq-answer">A fully optimized Store can take between 1 to 2 weeks for copy design and development. You will be updated daily with the progress of the project and the estimated remaining time.</p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-xl-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- video -->
+<div class="col-12 col-xl-2"></div>
+<div class="col-12 col-xl-8" id="video">
+  <div class="content__block">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <div style="position: relative; padding-bottom: 56.42633228840126%; height: 0;">
+            <!-- <iframe src="https://www.loom.com/embed/09bf47430dcf44609bc03383ef10cad1?sid=ed281f78-924a-4e15-a347-404c762bf7f7"
+                    frameborder="0"
+                    webkitallowfullscreen
+                    mozallowfullscreen
+                    allowfullscreen
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            </iframe> -->
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content__block large-text-block">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+        <div class="col-12">
+          <blockquote class="reveal-type animate-in-up">Building, Designing, and Maintaining <i class="fw-bold" style="font-style: italic; color: rgb(84 245 63)"> Shopify </i> Stores since 2023</blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 col-xl-2"></div>
+
+
+
+<!-- anatomy of lp -->
+   
+<section id="services" class="inner inner-grid-bottom services">
+  <div class="inner__wrapper">
+    <div class="container-fluid p-0">
+      <div class="row g-0">
+
+        <!-- Inner Section Name Start -->
+        <div class="col-12 col-xl-2">
+          <div class="inner__name">
+
+            <!-- Content Block - Section Name Start -->
+            <div class="content__block name-block">
+              <span class="section-name icon-right animate-in-up">
+                <span class="section-name-caption">Strategy</span>
+                <i class="ph ph-arrow-down-right"></i>
+              </span>
+            </div>
+            <!-- Content Block - Section Name Start -->
+
+          </div>
+        </div>
+        <!-- Inner Section Name End -->
+
+        <!-- Inner Section Content Start -->
+        <div class="col-12 col-xl-8">
+          <div class="inner__content">
+
+            <!-- Content Block - H2 Section Title Start -->
+            <div class="content__block section-grid-title">
+              <div class="block__descr">
+                <h2 class="reveal-type animate-in-up">The Anatomy Of The Perfect Landing Page</h2>
+              </div>
+            </div>
+            <!-- Content Block - H2 Section Title End -->
+
+            <!-- Content Block - Services/Features Cards V2 Block Start -->
+            <div class="content__block grid-block">
+              <div class="container-fluid p-0">
+                  <div class="row g-0 align-items-stretch cards">
+                    <!-- services cards grid single item -->
+                    <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                      <div class="cards__card d-flex flex-column">
+                        <div class="cards__descr">
+                          <!-- <h3 class="cards__title animate-in-up">Competitor <br>Analysis</h3> -->
+                          <h3 class="cards__title animate-in-up">Strategic<br>Copywriting</h3>
+                          <p class="cards__text type-basic-160lh animate-in-up">I work with HTML/CSS, Framer and WordPress.</p>
+                        </div>
+                        <div class="cards__image cards__image-v2 d-flex animate-in-up">
+                          <img class='lazy' data-src="images/1200x1200_s05.webp" alt="Service/Feature Image">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- services grid cards single item -->
+                    <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                      <div class="cards__card d-flex flex-column">
+                        <div class="cards__descr">
+                          <h3 class="cards__title animate-in-up">High-AOV <br>Offer</h3>
+                          <p class="cards__text type-basic-160lh animate-in-up">I use Adobe Fresco and Blender to create illustrations and 3D renders.</p>
+                        </div>
+                        <div class="cards__image cards__image-v2 d-flex animate-in-up">
+                          <img class='lazy' data-src="images/1200x1200_s06.webp" alt="Service/Feature Image">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- services grid cards single item -->
+                    <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                      <div class="cards__card d-flex flex-column">
+                        <div class="cards__descr">
+                          <h3 class="cards__title animate-in-up">Details Focused<br>Design</h3>
+                          <p class="cards__text type-basic-160lh animate-in-up">Focus on the little details is what seperate us, details not only look nice but they also give trust</p>
+                        </div>
+                        <div class="cards__image cards__image-v2 d-flex animate-in-up">
+                          <img class='lazy' data-src="images/1200x1200_s07.webp" alt="Service/Feature Image">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- services grid cards single item -->
+                    <div class="col-12 col-md-6 cards__item grid-item animate-card-2">
+                      <div class="cards__card d-flex flex-column">
+                        <div class="cards__descr">
+                          <h3 class="cards__title animate-in-up">Pixel Perfect<br> Development.</h3>
+                          <p class="cards__text type-basic-160lh animate-in-up">Making sure there is no bugs or issues, adding smooth scrolling effects and cool animations is also part of the process!</p>
+                        </div>
+                        <div class="cards__image cards__image-v2 d-flex animate-in-up">
+                          <img class='lazy' data-src="images/1200x1200_s08.webp" alt="Service/Feature Image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- Content Block - Services/Features Cards V2 Block End -->
+            
+          </div>
+        </div>
+        <!-- Inner Section Content End -->
+
+        <!-- Inner Section Aside Start -->
+        <div class="col-12 col-xl-2"></div>
+        <!-- Inner Section Aside End -->
+
+      </div>
+    </div>
+  </div>
+</section>
