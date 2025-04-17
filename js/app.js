@@ -296,6 +296,8 @@ $(window).on("load", function () {
         .children(".picture")
         .css({ "background-image": "url(" + $(this).attr("data-image") + ")" });
     }),
+
+    
       $(".modal form").submit(function (e) {
         e.preventDefault();
         var t = $(this),
@@ -322,17 +324,7 @@ $(window).on("load", function () {
             !1);
       });
   });
-const newsButton = document.querySelector(".news-btn");
-console.log(newsButton);
-const pricingSection = document.querySelector("#pricing"),
-  observer = new IntersectionObserver(
-    (e) => {
-      e.forEach((e) => {
-        e.isIntersecting ? (newsButton.style.right = "0") : (newsButton.style.right = "-4%");
-      });
-    },
-    { root: null, rootMargin: "0px", threshold: 0.4 }
-  );
+  // faq
 function toggleFAQ(e) {
   const t = e.parentElement,
     a = t.querySelector(".faq-answer"),
