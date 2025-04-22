@@ -478,7 +478,7 @@ ul {
 }
 .logo {
   opacity: 1;
-  top: 3rem;
+  top: 2rem;
   left: 5rem;
   height: 4rem;
   right: unset;
@@ -2098,6 +2098,9 @@ top: -4px;
         }
         }
 
+        .item.testimonial {
+          min-height: 338.016px;
+        }
         @media (min-width:992px) {
           .item.testimonial {
             min-height: 417.078px;
@@ -2154,8 +2157,13 @@ top: -4px;
           width: 23px;
           height: 23px;
         }
-
+        .aboutus-p {
+          font-size: 30px;
+        }
         @media (max-width:992px) {
+          .aboutus-p {
+            font-size: 20px;
+          }
           .testimony-text {
             border: solid 1px #535762;
             padding: 23px 28px   !important;
@@ -2194,9 +2202,7 @@ width: 30px;
 height: 30px;
           }
         }
-        .aboutus-p {
-          font-size: 30px;
-        }
+      
         .no-touch .text-link:hover {
     -moz-background-size: 0 1px, 100% 1px !important;
     background-size: 0 1px, 100% 1px !important;
