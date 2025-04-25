@@ -289,6 +289,9 @@ strong {
   color: #fff;
   font-size: 18px;
 }
+.listcomparative > li > p > img {
+  width: 20px;
+}
 .parentcomparative {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -449,6 +452,11 @@ strong {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+@media (max-width:992px) {
+  .sectiongridcomparative {
+    padding: 0 20px ;
+  }
 }
 ul {
   list-style-type: none;
