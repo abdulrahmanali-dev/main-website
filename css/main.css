@@ -2268,3 +2268,25 @@ flex-direction: column;
       margin: 11.3rem 0 15.2rem;
   }
 }
+.benefit-card h3 {
+  font-size: 30px;
+margin-bottom:20px;
+}
+
+.benefit-card {
+  border: solid 1px gray;
+  padding:20px;
+  border-radius: 20px;
+  height: 100%;
+}
+.benefit-icon {
+  width: 84px;
+  height: 120px;
+  object-fit: cover;
+}
+@media (max-width:992px) {
+  #about1 {
+    display: none;
+  }
+  
+}
