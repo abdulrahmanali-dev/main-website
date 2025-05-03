@@ -2074,12 +2074,15 @@ padding: 0;
 height: fit-content;
 margin-left: 5px;
 transition: .5s;
+
 }
 .btn-i:hover {
   transform: scale(1.1);
 
 }
         .btn-i svg {
+          top: 3px;
+          position: relative;
           width: 20px;
           height: 20px;
         }
@@ -2280,7 +2283,7 @@ margin-bottom:20px;
   height: 100%;
 }
 .benefit-icon {
-  width: 84px;
+  width: 94px;
   height: 120px;
   object-fit: cover;
 }
