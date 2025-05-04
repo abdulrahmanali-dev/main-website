@@ -1408,17 +1408,22 @@ code {
   background-position: top;
 } */
 
+.hide-desk {
+  display: none !important;
+}
 @media (max-width: 992px) {
+  .hide-desk {
+    display: inline !important;
+  }
   .media__fullwidth .item.image {
     width: 310px;
     height: 310px;
     max-height: unset !important;
   }
   .hide-mob {
-    display: none;
+    display: none !important;
   }
 }
-
 .loader  {
   display: none !important;
 }
