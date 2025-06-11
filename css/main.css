@@ -2298,3 +2298,9 @@ margin-bottom:20px;
   }
   
 }
+
+.pricing-features li.subheadline {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
